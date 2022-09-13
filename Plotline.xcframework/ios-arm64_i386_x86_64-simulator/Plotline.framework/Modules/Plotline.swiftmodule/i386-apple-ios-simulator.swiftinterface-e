@@ -1,0 +1,297 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target i386-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Plotline
+import AVFoundation
+import CoreData
+import Dispatch
+import Foundation
+import MobileCoreServices
+@_exported import Plotline
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Prompt : UIKit.UIView {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Identify {
+  public static func identify(attributes: [Swift.String : Swift.String])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PostfixEvaluation {
+  public static func evaluatePostfix(exp: [Plotline.Condition]) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MultiChoiceMultiCorrect : UIKit.UIView {
+  @objc deinit
+}
+public class EventTask {
+  public init(eventNames: Swift.Set<Swift.String>)
+  @available(iOS 10.0, *)
+  public func execute()
+  @objc deinit
+}
+public class AttributeTask {
+  public init(attributes: [Swift.String : Swift.String])
+  @available(iOS 10.0, *)
+  public func execute()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CompositeEventsTask {
+  public static func getEligibleCompositeEvents(compositeEventsList: [[Swift.String : Any]]?, properties: [Swift.String : Any]?) -> [Swift.String]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Utils {
+  public static func currentTimeInMilliSeconds() -> Swift.Int64
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Attributes {
+  public func getUserId() -> Swift.String
+  public func setUserId(userId: Swift.String)
+  public func getDeviceId() -> Swift.String
+  public func setDeviceId(deviceId: Swift.String)
+  public func getAppVersion() -> Swift.String
+  public func setAppVersion(appVersion: Swift.String)
+  public func getIOSVersion() -> Swift.String
+  public func setIOSVersion(iosVersion: Swift.String)
+  public func getSDKVersion() -> Swift.String
+  public func setSDKVersion(sdkVersion: Swift.String)
+  public func getOs() -> Swift.String
+  public func setOs(os: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SmileyRating : UIKit.UIView {
+  @objc deinit
+}
+public class InitTask {
+  public init(apiKey: Swift.String, userId: Swift.String)
+  public func execute()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 10.0, *)
+public class CoreDataManager {
+  public static let shared: Plotline.CoreDataManager
+  public func getEvent(eventName: Swift.String) -> Plotline.Event?
+  public func insertEvent(eventName: Swift.String)
+  public func updateEvent(eventName: Swift.String)
+  public func fetchEvents()
+  public func getAttribute(attributeName: Swift.String) -> Plotline.Attribute?
+  public func insertAttribute(attributeName: Swift.String, attributeValue: Swift.String)
+  public func updateAttribute(attributeName: Swift.String, attributeValue: Swift.String?)
+  public func getAttributesWithNames(attributeNameValues: [Swift.String]) -> [Plotline.Attribute]
+  public func getEventsWithName(eventNameValues: [Swift.String]) -> [Plotline.Event]
+  @objc deinit
+}
+public protocol InitCallback {
+  func onInitialized()
+}
+@_hasMissingDesignatedInitializers public class Init {
+  public static func initialize(context: UIKit.UIViewController, apiKey: Swift.String, userId: Swift.String)
+  @objc deinit
+}
+public class Plotline {
+  public var studyWindow: UIKit.UIWindow?
+  public func getApiKey() -> Swift.String?
+  public func setApiKey(sApiKey: Swift.String)
+  public func getEndpoint() -> Swift.String
+  public func setEndpoint(sEndpoint: Swift.String)
+  public func getDefaultAttributes() -> Plotline.Attributes
+  public func getsLocale() -> Swift.String
+  public func setsLocale(sLocale: Swift.String)
+  public func getEvents() -> Swift.Set<Swift.String>
+  public func setEvents(sEvents: Swift.Set<Swift.String>)
+  public func getAttributes() -> Swift.Set<Swift.String>
+  public func setAttributes(sAttributes: Swift.Set<Swift.String>)
+  public func getCompositeCodeEventsMap() -> [Swift.String : [[Swift.String : Any]]]
+  public func setCompositeCodeEventsMap(sCompositeCodeEventsMap: [Swift.String : [[Swift.String : Any]]])
+  public func getStudyStore() -> Plotline.StudyStore
+  public func getInitialized() -> Swift.Bool
+  public func setInitialized(initialized: Swift.Bool)
+  public func getStudyShown() -> Swift.Bool
+  public func setStudyShown(studyShown: Swift.Bool)
+  public func isShouldRegisterAttributesEvents() -> Swift.Bool
+  public func setShouldRegisterAttributesEvents(registerAttributesEvents: Swift.Bool)
+  public func registerInitCallback(callback: @escaping () -> ())
+  public func getInitCallbacks() -> [() -> ()]
+  public func clearCallBacks()
+  public init()
+  public static func getInstance() -> Plotline.Plotline
+  public func initKeys(apiKey: Swift.String, userId: Swift.String)
+  public func setDefaultAttributes(appVersion: Swift.String, iosVersion: Swift.String, deviceId: Swift.String)
+  public static func initialize(context: UIKit.UIViewController, apiKey: Swift.String, userId: Swift.String)
+  public static func initialize(context: UIKit.UIViewController, apiKey: Swift.String, userId: Swift.String, endpoint: Swift.String)
+  public static func track(eventName: Swift.String?)
+  public static func track(eventName: Swift.String?, properties: [Swift.String : Any])
+  public static func identify(attributes: [Swift.String : Swift.String])
+  public static func getStudyWindow()
+  public static func showMockStudy()
+  public static func setLocale(locale: Swift.String)
+  @objc deinit
+}
+public class EligibilityTask {
+  public init(studies: [Plotline.Study], eligibilityCallback: @escaping ([Swift.String]) -> ())
+  public func execute()
+  public func checkEligibilityForStudy(userFilter: [Plotline.Condition]) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MultiChoiceSingleCorrect : UIKit.UIView {
+  @objc deinit
+}
+public class StudyStore {
+  public init()
+  public func addData(surveyRawData: [[Swift.String : Any]])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Track {
+  public static func track(eventName: Swift.String, properties: [Swift.String : Any]?)
+  public static func track(eventName: Swift.String)
+  @objc deinit
+}
+public class Condition {
+  public var type: Swift.String?
+  public var key: Swift.String?
+  public var aggregate: Swift.String?
+  public var relation: Swift.String?
+  public var value: Swift.String?
+  public var pOperator: Swift.String?
+  public static let VAL_ATTRIBUTE: Swift.String
+  public static let VAL_EVENT: Swift.String
+  public static let VAL_OPERATOR: Swift.String
+  public static let VAL_PROPERTY: Swift.String
+  public init(condition: [Swift.String : Any])
+  public init(type: Swift.String, key: Swift.String, aggregate: Swift.String, relation: Swift.String, value: Swift.String, pOperator: Swift.String)
+  public static func convertConditionJSONArray(array: [[Swift.String : Any]]) -> [Plotline.Condition]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class DummyClass {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class OpenText : UIKit.UIView, UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc public func textViewDidBeginEditing(_ textbox: UIKit.UITextView)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Rating : UIKit.UIView {
+  @objc deinit
+}
+public class Study {
+  public var studyId: Swift.String
+  public var triggerEvents: [Swift.String]
+  public var userFilter: [Plotline.Condition]
+  public init(studyObject: [Swift.String : Any])
+  public static func checkEligibility(studies: [Plotline.Study], eligibilityCallback: @escaping ([Swift.String]) -> ())
+  @objc deinit
+}
+public protocol APICompletionCallback {
+  func onCompletion(value: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class PlotlineNetworkHelper {
+  public static func initialize(callback: @escaping ([Swift.String : Any]) -> Swift.Void)
+  public static func registerEvent(eventName: Swift.String, propertyKeys: [Swift.String]?)
+  public static func registerAttributes(attributes: [Swift.String])
+  public static func triggerEvent(eventName: Swift.String, eligibleStudies: [Swift.String], callback: @escaping ([Swift.String : Any]) -> ())
+  public static func sendResponse(studyId: Swift.String, questionId: Swift.String, answer: [Swift.String], isCompleted: Swift.Bool)
+  public static func sendAudioResponse(studyId: Swift.String, questionId: Swift.String, audioFile: Swift.String, isCompleted: Swift.Bool)
+  @objc deinit
+}
+public class QuestionModal {
+  public func getQuestionLayout() -> UIKit.UIView?
+  public init(questionIndex: Swift.Int, questions: [Plotline.Question], answerListener: Plotline.AnswerListener, hidePlotline: Swift.Bool)
+  @objc deinit
+}
+public protocol AnswerListener {
+  func onAnswer(questionType: Swift.String, questionIndex: Swift.Int, isDone: Swift.Bool, answer: [Swift.String])
+}
+@objc public protocol AnswerListener2 {
+  @objc func onAnswer()
+}
+public class Question {
+  public var questionId: Swift.String?
+  public var questionType: Swift.String?
+  public var options: [[Swift.String : Any]]?
+  public var question: Swift.String?
+  public var description: Swift.String?
+  public var skipLogic: [[Swift.String : Any]]?
+  public var buttonText: Swift.String?
+  public var textPlaceholder: Swift.String?
+  public var scaleRangeStart: Swift.Int?
+  public var scaleRangeEnd: Swift.Int?
+  public var lowLabel: Swift.String?
+  public var highLabel: Swift.String?
+  public var requestPermission: Swift.Bool?
+  public var maxRecordingTime: Swift.Int?
+  public static let TYPE_MCQ_SINGLE: Swift.String
+  public static let TYPE_MCQ_MULTIPLE: Swift.String
+  public static let TYPE_OPEN_TEXT: Swift.String
+  public static let TYPE_PROMPT: Swift.String
+  public static let TYPE_AUDIO: Swift.String
+  public static let TYPE_RATING: Swift.String
+  public static let TYPE_SMILEY_RATING: Swift.String
+  public init(questionId: Swift.String, questionType: Swift.String, options: [[Swift.String : Any]], question: Swift.String, description: Swift.String, skipLogic: [[Swift.String : Any]], buttonText: Swift.String, textPlaceholder: Swift.String, scaleRangeStart: Swift.Int, scaleRangeEnd: Swift.Int, lowLabel: Swift.String, highLabel: Swift.String, requestPermission: Swift.Bool, maxRecordingTime: Swift.Int)
+  public static func getQuestions(questions: [[Swift.String : Any]]) -> [Plotline.Question]
+  public func getMockQuestions() -> [Plotline.Question]
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ThankYouView : UIKit.UIView {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AudioQuestion : UIKit.UIView, AVFAudio.AVAudioRecorderDelegate, AVFAudio.AVAudioPlayerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc public func audioRecorderDidFinishRecording(_ recorder: AVFAudio.AVAudioRecorder, successfully flag: Swift.Bool)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(Attribute) public class Attribute : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Plotline.Attribute {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.Attribute>
+  @objc @NSManaged dynamic public var attributeName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var attributeValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(Event) public class Event : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Plotline.Event {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.Event>
+  @objc @NSManaged dynamic public var count: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var eventName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var firstUsed: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastUsed: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(Person) public class Person : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Plotline.Person {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.Person>
+  @objc @NSManaged dynamic public var age: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var firstname: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastname: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
