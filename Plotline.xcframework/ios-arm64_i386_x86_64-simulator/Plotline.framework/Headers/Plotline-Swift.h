@@ -200,6 +200,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -299,10 +300,15 @@ SWIFT_CLASS_NAMED("Person")
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
+- (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
++ (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId endpoint:(NSString * _Nonnull)endpoint;
 + (void)trackWithEventName:(NSString * _Nonnull)eventName;
++ (void)trackWithEventName:(NSString * _Nonnull)eventName properties:(NSDictionary<NSString *, id> * _Nonnull)properties;
++ (void)identifyWithAttributes:(NSDictionary<NSString *, NSString *> * _Nonnull)attributes;
 + (void)showMockStudy;
++ (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 @end
 
 
@@ -542,6 +548,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -641,10 +648,15 @@ SWIFT_CLASS_NAMED("Person")
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
+- (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
++ (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId endpoint:(NSString * _Nonnull)endpoint;
 + (void)trackWithEventName:(NSString * _Nonnull)eventName;
++ (void)trackWithEventName:(NSString * _Nonnull)eventName properties:(NSDictionary<NSString *, id> * _Nonnull)properties;
++ (void)identifyWithAttributes:(NSDictionary<NSString *, NSString *> * _Nonnull)attributes;
 + (void)showMockStudy;
++ (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 @end
 
 
@@ -884,6 +896,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
+@import Foundation;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -983,10 +996,15 @@ SWIFT_CLASS_NAMED("Person")
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
+- (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 + (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
++ (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId endpoint:(NSString * _Nonnull)endpoint;
 + (void)trackWithEventName:(NSString * _Nonnull)eventName;
++ (void)trackWithEventName:(NSString * _Nonnull)eventName properties:(NSDictionary<NSString *, id> * _Nonnull)properties;
++ (void)identifyWithAttributes:(NSDictionary<NSString *, NSString *> * _Nonnull)attributes;
 + (void)showMockStudy;
++ (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 @end
 
 
