@@ -200,6 +200,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -217,12 +218,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Plotline",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-
-SWIFT_PROTOCOL("_TtP8Plotline15AnswerListener2_")
-@protocol AnswerListener2
-- (void)onAnswer;
-@end
 
 @class NSEntityDescription;
 @class NSManagedObjectContext;
@@ -298,6 +293,12 @@ SWIFT_CLASS_NAMED("Person")
 @property (nonatomic) int16_t age;
 @property (nonatomic, copy) NSString * _Nullable firstname;
 @property (nonatomic, copy) NSString * _Nullable lastname;
+@end
+
+
+SWIFT_CLASS("_TtC8Plotline8Plotline")
+@interface Plotline : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -537,6 +538,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
+@import ObjectiveC;
 @import UIKit;
 #endif
 
@@ -554,12 +556,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma clang attribute push(__attribute__((external_source_symbol(language="Swift", defined_in="Plotline",generated_declaration))), apply_to=any(function,enum,objc_interface,objc_category,objc_protocol))
 # pragma pop_macro("any")
 #endif
-
-
-SWIFT_PROTOCOL("_TtP8Plotline15AnswerListener2_")
-@protocol AnswerListener2
-- (void)onAnswer;
-@end
 
 @class NSEntityDescription;
 @class NSManagedObjectContext;
@@ -635,6 +631,12 @@ SWIFT_CLASS_NAMED("Person")
 @property (nonatomic) int16_t age;
 @property (nonatomic, copy) NSString * _Nullable firstname;
 @property (nonatomic, copy) NSString * _Nullable lastname;
+@end
+
+
+SWIFT_CLASS("_TtC8Plotline8Plotline")
+@interface Plotline : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 

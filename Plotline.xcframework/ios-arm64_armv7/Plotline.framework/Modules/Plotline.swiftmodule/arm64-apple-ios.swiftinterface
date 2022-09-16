@@ -38,7 +38,7 @@ public class AttributeTask {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class CompositeEventsTask {
-  public static func getEligibleCompositeEvents(compositeEventsList: [[Swift.String : Any]]?, properties: [Swift.String : Any]?) -> [Swift.String]
+  public static func getEligibleCompositeEvents(compositeEventsList: [[Swift.String : Any]], properties: [Swift.String : Any]) -> [Swift.String]
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Utils {
@@ -89,7 +89,7 @@ public protocol InitCallback {
   public static func initialize(context: UIKit.UIViewController, apiKey: Swift.String, userId: Swift.String)
   @objc deinit
 }
-public class Plotline {
+@_inheritsConvenienceInitializers @objc public class Plotline : ObjectiveC.NSObject {
   public var studyWindow: UIKit.UIWindow?
   public func getApiKey() -> Swift.String?
   public func setApiKey(sApiKey: Swift.String)
@@ -114,14 +114,14 @@ public class Plotline {
   public func registerInitCallback(callback: @escaping () -> ())
   public func getInitCallbacks() -> [() -> ()]
   public func clearCallBacks()
-  public init()
+  @objc override dynamic public init()
   public static func getInstance() -> Plotline
   public func initKeys(apiKey: Swift.String, userId: Swift.String)
   public func setDefaultAttributes(appVersion: Swift.String, iosVersion: Swift.String, deviceId: Swift.String)
   public static func initialize(context: UIKit.UIViewController, apiKey: Swift.String, userId: Swift.String)
   public static func initialize(context: UIKit.UIViewController, apiKey: Swift.String, userId: Swift.String, endpoint: Swift.String)
-  public static func track(eventName: Swift.String?)
-  public static func track(eventName: Swift.String?, properties: [Swift.String : Any])
+  public static func track(eventName: Swift.String)
+  public static func track(eventName: Swift.String, properties: [Swift.String : Any])
   public static func identify(attributes: [Swift.String : Swift.String])
   public static func getStudyWindow()
   public static func showMockStudy()
@@ -143,8 +143,9 @@ public class StudyStore {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Track {
-  public static func track(eventName: Swift.String, properties: [Swift.String : Any]?)
+  public static func trackTask(eventName: Swift.String, properties: [Swift.String : Any]?)
   public static func track(eventName: Swift.String)
+  public static func track(eventName: Swift.String, properties: [Swift.String : Any])
   @objc deinit
 }
 public class Condition {
@@ -201,9 +202,6 @@ public class QuestionModal {
 public protocol AnswerListener {
   func onAnswer(questionType: Swift.String, questionIndex: Swift.Int, isDone: Swift.Bool, answer: [Swift.String])
 }
-@objc public protocol AnswerListener2 {
-  @objc func onAnswer()
-}
 public class Question {
   public var questionId: Swift.String?
   public var questionType: Swift.String?
@@ -228,7 +226,7 @@ public class Question {
   public static let TYPE_SMILEY_RATING: Swift.String
   public init(questionId: Swift.String, questionType: Swift.String, options: [[Swift.String : Any]], question: Swift.String, description: Swift.String, skipLogic: [[Swift.String : Any]], buttonText: Swift.String, textPlaceholder: Swift.String, scaleRangeStart: Swift.Int, scaleRangeEnd: Swift.Int, lowLabel: Swift.String, highLabel: Swift.String, requestPermission: Swift.Bool, maxRecordingTime: Swift.Int)
   public static func getQuestions(questions: [[Swift.String : Any]]) -> [Question]
-  public func getMockQuestions() -> [Question]
+  public static func getMockQuestions() -> [Question]
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ThankYouView : UIKit.UIView {
