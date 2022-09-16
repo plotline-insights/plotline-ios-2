@@ -295,10 +295,14 @@ SWIFT_CLASS_NAMED("Person")
 @property (nonatomic, copy) NSString * _Nullable lastname;
 @end
 
+@class UIViewController;
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
++ (void)trackWithEventName:(NSString * _Nonnull)eventName;
++ (void)showMockStudy;
 @end
 
 
@@ -633,10 +637,14 @@ SWIFT_CLASS_NAMED("Person")
 @property (nonatomic, copy) NSString * _Nullable lastname;
 @end
 
+@class UIViewController;
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
++ (void)initializeWithContext:(UIViewController * _Nonnull)context apiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
++ (void)trackWithEventName:(NSString * _Nonnull)eventName;
++ (void)showMockStudy;
 @end
 
 
