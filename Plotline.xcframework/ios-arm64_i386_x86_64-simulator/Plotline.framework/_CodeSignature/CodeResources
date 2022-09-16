@@ -22,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bzeaeYJV2Rvmb6jNGP02OBIvZc8=
+		TgKQKvPCGwP83UjPO6+r9QWQ2XU=
 		</data>
 		<key>Modules/Plotline.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -79,10 +79,6 @@
 		<key>PRes.bundle/_CodeSignature/CodeResources</key>
 		<data>
 		6TME4gDdczzK99E/I0nUePT+5Kc=
-		</data>
-		<key>PlotlineInfo.plist</key>
-		<data>
-		8HrYpElX3X/HWRmPRrh/yUa0Bu4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -283,17 +279,6 @@
 			<key>hash2</key>
 			<data>
 			flW+ohS21gGAtXI2lr+Ks5EKishp9MKYM8X+bK6fgj0=
-			</data>
-		</dict>
-		<key>PlotlineInfo.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			8HrYpElX3X/HWRmPRrh/yUa0Bu4=
-			</data>
-			<key>hash2</key>
-			<data>
-			2uePo5gIaypoHhpjSHY0PcX+ffui6EiSLIRDGDElmHU=
 			</data>
 		</dict>
 	</dict>
