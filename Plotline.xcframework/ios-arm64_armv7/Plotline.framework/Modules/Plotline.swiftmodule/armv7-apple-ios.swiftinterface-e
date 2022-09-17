@@ -71,14 +71,24 @@ public class InitTask {
 @_hasMissingDesignatedInitializers @available(iOS 10.0, *)
 public class CoreDataManager {
   public static let shared: Plotline.CoreDataManager
-  public func getEvent(eventName: Swift.String) -> Plotline.Event?
+  public func getEvent(eventName: Swift.String) -> Plotline.PEvent?
   public func insertEvent(eventName: Swift.String)
   public func updateEvent(eventName: Swift.String)
-  public func getAttribute(attributeName: Swift.String) -> Plotline.Attribute?
+  public func getAttribute(attributeName: Swift.String) -> Plotline.PAttribute?
   public func insertAttribute(attributeName: Swift.String, attributeValue: Swift.String)
   public func updateAttribute(attributeName: Swift.String, attributeValue: Swift.String?)
-  public func getAttributesWithNames(attributeNameValues: [Swift.String]) -> [Plotline.Attribute]
-  public func getEventsWithName(eventNameValues: [Swift.String]) -> [Plotline.Event]
+  public func getAttributesWithNames(attributeNameValues: [Swift.String]) -> [Plotline.PAttribute]
+  public func getEventsWithName(eventNameValues: [Swift.String]) -> [Plotline.PEvent]
+  @objc deinit
+}
+public class PEvent {
+  public var eventName: Swift.String
+  public var count: Swift.Int16
+  public var lastUsed: Swift.Int64
+  public var firstUsed: Swift.Int64
+  public init(eventName: Swift.String, count: Swift.Int16, lastUsed: Swift.Int64, firstUsed: Swift.Int64)
+  public init(event: Plotline.Event)
+  public init()
   @objc deinit
 }
 public protocol InitCallback {
@@ -139,6 +149,14 @@ public class EligibilityTask {
 public class StudyStore {
   public init()
   public func addData(surveyRawData: [[Swift.String : Any]])
+  @objc deinit
+}
+public class PAttribute {
+  public var attributeName: Swift.String
+  public var attributeValue: Swift.String
+  public init(attributeName: Swift.String, attributeValue: Swift.String)
+  public init(attribute: Plotline.Attribute)
+  public init()
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class Track {
