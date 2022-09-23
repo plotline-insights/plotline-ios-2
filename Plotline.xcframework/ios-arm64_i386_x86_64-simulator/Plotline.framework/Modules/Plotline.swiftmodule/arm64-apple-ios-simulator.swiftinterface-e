@@ -45,6 +45,21 @@ public class AttributeTask {
   public static func currentTimeInMilliSeconds() -> Swift.Int64
   @objc deinit
 }
+public class Color {
+  public var background: Swift.String
+  public var description: Swift.String
+  public var title: Swift.String
+  public var optionText: Swift.String
+  public var optionBackground: Swift.String
+  public var optionBorder: Swift.String
+  public var buttonBackground: Swift.String
+  public var buttonText: Swift.String
+  public var progressValue: Swift.String
+  public var progressBackground: Swift.String
+  public init()
+  public func setColor(colors: [Swift.String : Swift.String])
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class Attributes {
   public func getUserId() -> Swift.String
   public func setUserId(userId: Swift.String)
@@ -105,6 +120,8 @@ public protocol InitCallback {
   public func getEndpoint() -> Swift.String
   public func setEndpoint(sEndpoint: Swift.String)
   public func getDefaultAttributes() -> Plotline.Attributes
+  public func getsColors() -> Plotline.Color
+  public func setsColors(sColors: [Swift.String : Swift.String])
   public func getsLocale() -> Swift.String
   public func setsLocale(sLocale: Swift.String)
   public func getEvents() -> Swift.Set<Swift.String>
@@ -135,6 +152,7 @@ public protocol InitCallback {
   public static func getStudyWindow()
   @objc public static func showMockStudy()
   @objc public static func setLocale(locale: Swift.String)
+  @objc public static func setColor(colors: [Swift.String : Swift.String])
   @objc deinit
 }
 public class EligibilityTask {

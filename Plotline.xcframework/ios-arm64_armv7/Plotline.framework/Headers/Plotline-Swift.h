@@ -308,6 +308,7 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)identifyWithAttributes:(NSDictionary<NSString *, NSString *> * _Nonnull)attributes;
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
++ (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
 @end
 
 
@@ -655,6 +656,7 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)identifyWithAttributes:(NSDictionary<NSString *, NSString *> * _Nonnull)attributes;
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
++ (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
 @end
 
 
