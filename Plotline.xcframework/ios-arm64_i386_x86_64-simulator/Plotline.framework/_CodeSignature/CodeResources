@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uhXN39L+2yQlzgGfT7KB1KKLJts=
+		9RovEb9C4Wg8MUmAjd1Qjbv/ZGg=
 		</data>
 		<key>Modules/Plotline.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XhMSGkC+Y5FScDLzmmMqqXuSP+I=
+		ZNRjO+q9D+8yYIu8ch9CPMnmMqc=
 		</data>
 		<key>Modules/Plotline.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		f1pVVUREfcvXqu8ujxxhsctq5lA=
+		SJ3qDDOoEGEv6WIV2fJgPmqH28g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -72,13 +72,25 @@
 		<data>
 		XBh9bm25Qqcz5AyobEvQfIr/yqE=
 		</data>
-		<key>PRes.bundle/PRes</key>
+		<key>PRes.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		YmYxGbV5rOPD20mAfFBXp5PMnM4=
+		MHSOEcjmlwitf43cVDJf03lTFuw=
+		</data>
+		<key>PRes.bundle/_CodeSignature/CodeRequirements</key>
+		<data>
+		OnX22wWFKRSOFN1+obRynMCeyXM=
+		</data>
+		<key>PRes.bundle/_CodeSignature/CodeRequirements-1</key>
+		<data>
+		ScSWfTs3Oml2QDOOPATSsctmW5A=
 		</data>
 		<key>PRes.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		6TME4gDdczzK99E/I0nUePT+5Kc=
+		mE23UTtwMpJuAUTRoRXGLvFGW3k=
+		</data>
+		<key>PRes.bundle/_CodeSignature/CodeSignature</key>
+		<data>
+		2jmj7l5rSw0yVb/vlWAYkK/YBwk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -153,11 +165,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			uhXN39L+2yQlzgGfT7KB1KKLJts=
+			9RovEb9C4Wg8MUmAjd1Qjbv/ZGg=
 			</data>
 			<key>hash2</key>
 			<data>
-			A8reGazTNPLnOTEzLcI6OAR0SY1503grWR5CJmQYJdI=
+			qCuE8W4xpii0fZvYJu71aG5QjXrkfZqyoz8vd1O+hMI=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -186,11 +198,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XhMSGkC+Y5FScDLzmmMqqXuSP+I=
+			ZNRjO+q9D+8yYIu8ch9CPMnmMqc=
 			</data>
 			<key>hash2</key>
 			<data>
-			dpthdESYnzsbhuK0hCx3LnkEoKHet+BqEYGSPGAihRo=
+			s/kbbnE5hmK0Y9OWIEVvztb75lhfhpevvojtsEmKyWY=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -219,11 +231,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			f1pVVUREfcvXqu8ujxxhsctq5lA=
+			SJ3qDDOoEGEv6WIV2fJgPmqH28g=
 			</data>
 			<key>hash2</key>
 			<data>
-			PUC4U9lv79iKcT6ECDZgjJmHYEGxmHOVLpmWyr+rID0=
+			FNQF4gUkcNLHbc/cC4IsM+qWW5NT6xExSliszqt7e/U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -259,26 +271,59 @@
 			Gs3MovKy9XKxuxkoYiAhtic2wWF99FvPfVjtT8WYFzU=
 			</data>
 		</dict>
-		<key>PRes.bundle/PRes</key>
+		<key>PRes.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YmYxGbV5rOPD20mAfFBXp5PMnM4=
+			MHSOEcjmlwitf43cVDJf03lTFuw=
 			</data>
 			<key>hash2</key>
 			<data>
-			LFAefaQSMYvpYmT9q//0a/qJY8ZaRfQTJr+owsG/wI8=
+			WEqxlPOWLaKzJ8EcsHPCYgCPcu5vamIdyg8fT/101dk=
+			</data>
+		</dict>
+		<key>PRes.bundle/_CodeSignature/CodeRequirements</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			OnX22wWFKRSOFN1+obRynMCeyXM=
+			</data>
+			<key>hash2</key>
+			<data>
+			mHkgkE6rZQ51eIwFSqCwUk5qgL/HGqMt+NI3phdD+YY=
+			</data>
+		</dict>
+		<key>PRes.bundle/_CodeSignature/CodeRequirements-1</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ScSWfTs3Oml2QDOOPATSsctmW5A=
+			</data>
+			<key>hash2</key>
+			<data>
+			S84E+OUkjz3OIj/U6+10SUpkmsVjdSLL9IOkODeiN/0=
 			</data>
 		</dict>
 		<key>PRes.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6TME4gDdczzK99E/I0nUePT+5Kc=
+			mE23UTtwMpJuAUTRoRXGLvFGW3k=
 			</data>
 			<key>hash2</key>
 			<data>
-			flW+ohS21gGAtXI2lr+Ks5EKishp9MKYM8X+bK6fgj0=
+			WUMkDZga1l4zoBZY/rTTNQ/Vmd1C87kWuQfHnE+Fn9U=
+			</data>
+		</dict>
+		<key>PRes.bundle/_CodeSignature/CodeSignature</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+			</data>
+			<key>hash2</key>
+			<data>
+			47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 			</data>
 		</dict>
 	</dict>
