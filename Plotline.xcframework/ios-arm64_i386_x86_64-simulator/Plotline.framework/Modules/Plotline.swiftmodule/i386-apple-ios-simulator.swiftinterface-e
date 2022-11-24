@@ -158,6 +158,9 @@ public protocol InitCallback {
 public class EligibilityTask {
   public init(studies: [Plotline.Study], eligibilityCallback: @escaping ([Swift.String]) -> ())
   public func execute()
+  public static func compareString(str1: Swift.String, str2: Swift.String) -> Swift.Int
+  public static func compareLong(value1: Swift.Int64, value2: Swift.Int64) -> Swift.Int
+  public static func compareStrings(s1: Swift.String, s2: Swift.String) -> Swift.Int
   public func checkEligibilityForStudy(userFilter: [Plotline.Condition]) -> Swift.Bool
   @objc deinit
 }

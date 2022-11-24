@@ -274,6 +274,7 @@ SWIFT_CLASS("_TtC8Plotline24MultiChoiceSingleCorrect")
 @end
 
 
+
 @class UITextView;
 
 SWIFT_CLASS("_TtC8Plotline8OpenText")
@@ -620,6 +621,7 @@ SWIFT_CLASS("_TtC8Plotline24MultiChoiceSingleCorrect")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
+
 
 
 @class UITextView;
