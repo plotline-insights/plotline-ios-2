@@ -102,7 +102,7 @@ public class PEvent {
   public var lastUsed: Swift.Int64
   public var firstUsed: Swift.Int64
   public init(eventName: Swift.String, count: Swift.Int16, lastUsed: Swift.Int64, firstUsed: Swift.Int64)
-  public init(event: Plotline.Event)
+  public init(event: Plotline.PlotlineEvent)
   public init()
   @objc deinit
 }
@@ -289,29 +289,6 @@ extension Plotline.Attribute {
     @objc set
   }
 }
-@_inheritsConvenienceInitializers @objc(Event) public class Event : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-extension Plotline.Event {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.Event>
-  @objc @NSManaged dynamic public var count: Swift.Int16 {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var eventName: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var firstUsed: Swift.Int64 {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var lastUsed: Swift.Int64 {
-    @objc get
-    @objc set
-  }
-}
 @_inheritsConvenienceInitializers @objc(Person) public class Person : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit
@@ -327,6 +304,29 @@ extension Plotline.Person {
     @objc set
   }
   @objc @NSManaged dynamic public var lastname: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(PlotlineEvent) public class PlotlineEvent : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Plotline.PlotlineEvent {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.PlotlineEvent>
+  @objc @NSManaged dynamic public var count: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var eventName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var firstUsed: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastUsed: Swift.Int64 {
     @objc get
     @objc set
   }

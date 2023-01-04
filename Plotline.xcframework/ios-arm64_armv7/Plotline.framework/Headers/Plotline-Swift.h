@@ -247,20 +247,6 @@ SWIFT_CLASS("_TtC8Plotline13AudioQuestion")
 @end
 
 
-SWIFT_CLASS_NAMED("Event")
-@interface Event : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Event (SWIFT_EXTENSION(Plotline))
-@property (nonatomic) int16_t count;
-@property (nonatomic, copy) NSString * _Nullable eventName;
-@property (nonatomic) int64_t firstUsed;
-@property (nonatomic) int64_t lastUsed;
-@end
-
-
 SWIFT_CLASS("_TtC8Plotline23MultiChoiceMultiCorrect")
 @interface MultiChoiceMultiCorrect : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -311,6 +297,20 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 + (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
+@end
+
+
+SWIFT_CLASS_NAMED("PlotlineEvent")
+@interface PlotlineEvent : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface PlotlineEvent (SWIFT_EXTENSION(Plotline))
+@property (nonatomic) int16_t count;
+@property (nonatomic, copy) NSString * _Nullable eventName;
+@property (nonatomic) int64_t firstUsed;
+@property (nonatomic) int64_t lastUsed;
 @end
 
 
@@ -596,20 +596,6 @@ SWIFT_CLASS("_TtC8Plotline13AudioQuestion")
 @end
 
 
-SWIFT_CLASS_NAMED("Event")
-@interface Event : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Event (SWIFT_EXTENSION(Plotline))
-@property (nonatomic) int16_t count;
-@property (nonatomic, copy) NSString * _Nullable eventName;
-@property (nonatomic) int64_t firstUsed;
-@property (nonatomic) int64_t lastUsed;
-@end
-
-
 SWIFT_CLASS("_TtC8Plotline23MultiChoiceMultiCorrect")
 @interface MultiChoiceMultiCorrect : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
@@ -660,6 +646,20 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 + (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
+@end
+
+
+SWIFT_CLASS_NAMED("PlotlineEvent")
+@interface PlotlineEvent : NSManagedObject
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+@interface PlotlineEvent (SWIFT_EXTENSION(Plotline))
+@property (nonatomic) int16_t count;
+@property (nonatomic, copy) NSString * _Nullable eventName;
+@property (nonatomic) int64_t firstUsed;
+@property (nonatomic) int64_t lastUsed;
 @end
 
 
