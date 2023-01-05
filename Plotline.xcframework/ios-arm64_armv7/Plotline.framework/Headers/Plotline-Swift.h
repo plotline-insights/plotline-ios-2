@@ -378,6 +378,7 @@ SWIFT_CLASS("_TtC8Plotline12ThankYouView")
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#import <CoreData/CoreData.h>
 
 #if !defined(SWIFT_TYPEDEFS)
 # define SWIFT_TYPEDEFS 1
