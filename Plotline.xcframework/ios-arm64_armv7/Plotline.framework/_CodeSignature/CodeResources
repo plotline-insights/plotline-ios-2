@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/Plotline-Swift.h</key>
 		<data>
-		+vrjfY4b57pp8qBQE8LbuxnRiCI=
+		Gro9bNHrNzKi6bObQCiwvONcU5Q=
 		</data>
 		<key>Headers/Plotline.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ymXjSKgtPE6SurDIyP8MQTpqFjk=
+		GZLVx+rjCRPCpo8aEAm/+0ejFlg=
 		</data>
 		<key>Modules/Plotline.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		L1UNjw0HqL2DRKNNiPblcBaZrcg=
+		PTebqtYlTTbraPhiCjTl9mlNeUA=
 		</data>
 		<key>Modules/Plotline.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		4m8ZjRss93AzHXd5N2L4DgmPpUw=
+		dmr47Uz6FzwayWD3GkDrKdjBSNI=
 		</data>
 		<key>Modules/Plotline.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		GNNfrwIfKmozeSPiloez+UXHrCU=
+		ta4mlk+LMQLWdUf1g8NPZgrCSAA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,11 +89,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+vrjfY4b57pp8qBQE8LbuxnRiCI=
+			Gro9bNHrNzKi6bObQCiwvONcU5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			lAlEOQB4hGLXyi2bd0ZW7pEkHuBwH+7hxcJtrN3GmdU=
+			KVUH3CybaGZQmNO21uUNfm5w1eqaJoGaLUESuu8r9p8=
 			</data>
 		</dict>
 		<key>Headers/Plotline.h</key>
@@ -122,22 +122,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ymXjSKgtPE6SurDIyP8MQTpqFjk=
+			GZLVx+rjCRPCpo8aEAm/+0ejFlg=
 			</data>
 			<key>hash2</key>
 			<data>
-			gnU0myCW5YFu+r/9ouOYp//pQAdVb2zzaTLUU5Nz9aw=
+			1ue//p9kj6p9TdvhozIZ8sSSkuFEjh7Qvfvki/JFoI0=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L1UNjw0HqL2DRKNNiPblcBaZrcg=
+			PTebqtYlTTbraPhiCjTl9mlNeUA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Pdy+2Pobi1A6s+m1NBGsDnwINL4pqYw0VNxmA4T+rSU=
+			NrfXUy4D0MHLZH13bvK4wl5OvA3kfHZJQyPY5kbrA08=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -155,22 +155,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4m8ZjRss93AzHXd5N2L4DgmPpUw=
+			dmr47Uz6FzwayWD3GkDrKdjBSNI=
 			</data>
 			<key>hash2</key>
 			<data>
-			FKXiEO+AsgLfvoTRGZ2kMCMDp2mSqdNZ7n6jMAYujuE=
+			ZhG8+o+sCjFBymX/t7y569IlBqwci+J3zy2pE6zP7mA=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			GNNfrwIfKmozeSPiloez+UXHrCU=
+			ta4mlk+LMQLWdUf1g8NPZgrCSAA=
 			</data>
 			<key>hash2</key>
 			<data>
-			0/ulFdDgTenzTM2dgBPTYGYmKxZfH3I01vnX9G6TD58=
+			paoYB4vJeMqU3ZbOFyLroj/5c3uDcuPhaT900/MKZBM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -288,7 +288,8 @@ SWIFT_CLASS_NAMED("Person")
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
 - (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (void)initializeWithApiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
 + (void)initializeWithApiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId endpoint:(NSString * _Nonnull)endpoint;
 + (void)trackWithEventName:(NSString * _Nonnull)eventName;
@@ -638,7 +639,8 @@ SWIFT_CLASS_NAMED("Person")
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
 - (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 + (void)initializeWithApiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId;
 + (void)initializeWithApiKey:(NSString * _Nonnull)apiKey userId:(NSString * _Nonnull)userId endpoint:(NSString * _Nonnull)endpoint;
 + (void)trackWithEventName:(NSString * _Nonnull)eventName;

@@ -113,7 +113,7 @@ public protocol InitCallback {
   public static func initialize(apiKey: Swift.String, userId: Swift.String)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class Plotline : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class Plotline : ObjectiveC.NSObject {
   public var studyWindow: UIKit.UIWindow?
   public func getApiKey() -> Swift.String?
   public func setApiKey(sApiKey: Swift.String)
@@ -140,7 +140,6 @@ public protocol InitCallback {
   @objc public func registerInitCallback(callback: @escaping () -> ())
   public func getInitCallbacks() -> [() -> ()]
   public func clearCallBacks()
-  @objc override dynamic public init()
   public static func getInstance() -> Plotline.Plotline
   public func initKeys(apiKey: Swift.String, userId: Swift.String)
   public func setDefaultAttributes(appVersion: Swift.String, iosVersion: Swift.String, deviceId: Swift.String)
