@@ -288,25 +288,6 @@ extension Attribute {
     @objc set
   }
 }
-@_inheritsConvenienceInitializers @objc(Person) public class Person : CoreData.NSManagedObject {
-  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
-  @objc deinit
-}
-extension Person {
-  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Person>
-  @objc @NSManaged dynamic public var age: Swift.Int16 {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var firstname: Swift.String? {
-    @objc get
-    @objc set
-  }
-  @objc @NSManaged dynamic public var lastname: Swift.String? {
-    @objc get
-    @objc set
-  }
-}
 @_inheritsConvenienceInitializers @objc(PlotlineEvent) public class PlotlineEvent : CoreData.NSManagedObject {
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   @objc deinit

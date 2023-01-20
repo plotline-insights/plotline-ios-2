@@ -272,19 +272,6 @@ SWIFT_CLASS("_TtC8Plotline8OpenText")
 @end
 
 
-SWIFT_CLASS_NAMED("Person")
-@interface Person : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Person (SWIFT_EXTENSION(Plotline))
-@property (nonatomic) int16_t age;
-@property (nonatomic, copy) NSString * _Nullable firstname;
-@property (nonatomic, copy) NSString * _Nullable lastname;
-@end
-
-
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
 - (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
@@ -620,19 +607,6 @@ SWIFT_CLASS("_TtC8Plotline8OpenText")
 - (void)textViewDidBeginEditing:(UITextView * _Nonnull)textbox;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
-
-SWIFT_CLASS_NAMED("Person")
-@interface Person : NSManagedObject
-- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-@interface Person (SWIFT_EXTENSION(Plotline))
-@property (nonatomic) int16_t age;
-@property (nonatomic, copy) NSString * _Nullable firstname;
-@property (nonatomic, copy) NSString * _Nullable lastname;
 @end
 
 
