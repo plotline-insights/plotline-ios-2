@@ -198,7 +198,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
 @import Foundation;
@@ -236,16 +235,7 @@ SWIFT_CLASS_NAMED("Attribute")
 @property (nonatomic, copy) NSString * _Nullable attributeValue;
 @end
 
-@class AVAudioRecorder;
 @class NSCoder;
-
-SWIFT_CLASS("_TtC8Plotline13AudioQuestion")
-@interface AudioQuestion : UIView <AVAudioPlayerDelegate, AVAudioRecorderDelegate>
-- (void)audioRecorderDidFinishRecording:(AVAudioRecorder * _Nonnull)recorder successfully:(BOOL)flag;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
 
 SWIFT_CLASS("_TtC8Plotline23MultiChoiceMultiCorrect")
 @interface MultiChoiceMultiCorrect : UIView
@@ -536,7 +526,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import AVFAudio;
 @import CoreData;
 @import CoreGraphics;
 @import Foundation;
@@ -574,16 +563,7 @@ SWIFT_CLASS_NAMED("Attribute")
 @property (nonatomic, copy) NSString * _Nullable attributeValue;
 @end
 
-@class AVAudioRecorder;
 @class NSCoder;
-
-SWIFT_CLASS("_TtC8Plotline13AudioQuestion")
-@interface AudioQuestion : UIView <AVAudioPlayerDelegate, AVAudioRecorderDelegate>
-- (void)audioRecorderDidFinishRecording:(AVAudioRecorder * _Nonnull)recorder successfully:(BOOL)flag;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-@end
-
 
 SWIFT_CLASS("_TtC8Plotline23MultiChoiceMultiCorrect")
 @interface MultiChoiceMultiCorrect : UIView
