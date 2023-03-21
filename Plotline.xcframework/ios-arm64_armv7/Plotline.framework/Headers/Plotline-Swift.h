@@ -286,6 +286,7 @@ SWIFT_CLASS("_TtC8Plotline8OpenText")
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
++ (void)setPlotlineFrameworkWithFramework:(NSString * _Nonnull)framework;
 - (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -297,6 +298,7 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 + (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
++ (void)trackPageWithPageName:(NSString * _Nonnull)pageName;
 + (void)initAlong SWIFT_METHOD_FAMILY(none);
 + (void)debugWithShouldDebug:(BOOL)shouldDebug;
 @end
@@ -402,6 +404,7 @@ SWIFT_CLASS("_TtC8Plotline12ThankYouView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
+
 
 
 
@@ -702,6 +705,7 @@ SWIFT_CLASS("_TtC8Plotline8OpenText")
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
++ (void)setPlotlineFrameworkWithFramework:(NSString * _Nonnull)framework;
 - (void)registerInitCallbackWithCallback:(void (^ _Nonnull)(void))callback;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -713,6 +717,7 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 + (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
++ (void)trackPageWithPageName:(NSString * _Nonnull)pageName;
 + (void)initAlong SWIFT_METHOD_FAMILY(none);
 + (void)debugWithShouldDebug:(BOOL)shouldDebug;
 @end
@@ -818,6 +823,7 @@ SWIFT_CLASS("_TtC8Plotline12ThankYouView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
+
 
 
 
