@@ -1,0 +1,11 @@
+framework module Plotline {
+  umbrella header "Plotline.h"
+
+  export *
+  module * { export * }
+}
+
+module Plotline.Swift {
+    header "Plotline-Swift.h"
+    requires objc
+}

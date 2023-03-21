@@ -1,0 +1,609 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Plotline
+import AVFoundation
+import CoreData
+import Dispatch
+import Foundation
+import MobileCoreServices
+@_exported import Plotline
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Prompt : UIKit.UIView {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Identify {
+  public static func identify(attributes: [Swift.String : Any])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Queue<T> {
+  public func push(value: T)
+  public func pop() -> T?
+  public func peek() -> T?
+  public func empty() -> Swift.Bool
+  @objc deinit
+}
+public class StepStyles {
+  public var bgColor: Swift.String
+  public var borderSize: Swift.Int
+  public var borderColor: Swift.String
+  public var borderRadius: Swift.Int
+  public var fontSize: Swift.Int
+  public var fontColor: Swift.String
+  public var fontSpacing: Swift.Float
+  public var fontWeight: Swift.Int
+  public var lineHeight: Swift.Int
+  public var textDecoration: [Swift.String]
+  public var fontFamily: Swift.String
+  public init(_ json: [Swift.String : Any])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PostfixEvaluation {
+  public static func evaluatePostfix(exp: [Plotline.Condition]) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MultiChoiceMultiCorrect : UIKit.UIView {
+  @objc deinit
+}
+public class EventTask {
+  public init(eventNames: Swift.Set<Swift.String>)
+  @available(iOS 10.0, *)
+  public func execute()
+  @objc deinit
+}
+public class AttributeTask {
+  public init(attributes: [Swift.String : Any])
+  public func convertToString(input: Any) -> Swift.String
+  @available(iOS 10.0, *)
+  public func execute()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CompositeEventsTask {
+  public static func getEligibleCompositeEvents(compositeEventsList: [[Swift.String : Any]], properties: [Swift.String : Any]) -> [Swift.String]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Utils {
+  public static func currentTimeInMilliSeconds() -> Swift.Int64
+  @objc deinit
+}
+public protocol FlowStepListener {
+  func onShow(currentStepId: Swift.String)
+  func endFlow(String currentStepId: Swift.String)
+  func goToStep(currentStepId: Swift.String, nextStepId: Swift.String)
+}
+public protocol PlotlineViewListener {
+  func show()
+  func dismiss()
+  func isShowing() -> Swift.Bool
+  func onAction(stepId: Swift.String?, action: Swift.String?, effect: Swift.String?, target: Swift.String?, platform: Swift.String?, requireDismiss: Swift.Bool, isDismissed: Swift.Bool)
+}
+public protocol ActionListener {
+  func onAction(stepId: Swift.String?, action: Swift.String?, effect: Swift.String?, target: Swift.String?, platform: Swift.String?, requireDismiss: Swift.Bool, isDismissed: Swift.Bool)
+}
+public protocol PageListener {
+  func onPageChange(clientPageId: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers public class Flows : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public var plotlineViewListener: Plotline.PlotlineViewListener?
+  public var delayRunTask: Dispatch.DispatchWorkItem?
+  public var activeStepId: Swift.String
+  public var xPos: Swift.Double
+  public var yPos: Swift.Double
+  public func setPosition(newX: Swift.Double, newY: Swift.Double)
+  public static func getInstance() -> Plotline.Flows
+  public static func showFloatingButton(view: UIKit.UIView)
+  public static func getElementInView(view: UIKit.UIView, fragmentId: Swift.String, elementId: Swift.String) -> UIKit.UIView?
+  public static func getPlotlineViewListener(view: UIKit.UIView, flowStep: Plotline.FlowStep, stepListener: Plotline.FlowStepListener, plotlineViewListenerReady: @escaping (Plotline.PlotlineViewListener?) -> ())
+  public static func showFlow(view: UIKit.UIView, flowStep: Plotline.FlowStep, stepListener: Plotline.FlowStepListener)
+  @objc deinit
+}
+public class Color {
+  public var background: Swift.String
+  public var description: Swift.String
+  public var title: Swift.String
+  public var optionText: Swift.String
+  public var optionBackground: Swift.String
+  public var optionBorder: Swift.String
+  public var buttonBackground: Swift.String
+  public var buttonText: Swift.String
+  public var progressValue: Swift.String
+  public var progressBackground: Swift.String
+  public init()
+  public func setColor(colors: [Swift.String : Swift.String])
+  @objc deinit
+}
+public class Campaign {
+  public var id: Swift.String
+  public var triggerEvents: [Swift.String]
+  public var userFilter: [Plotline.Condition]
+  public var campaignType: Swift.String
+  public static var CAMPAIGN_STUDY: Swift.String
+  public static var CAMPAIGN_FLOW: Swift.String
+  public init(json: [Swift.String : Any], id: Swift.String, campaignType: Swift.String)
+  public static func checkEligibility(campaigns: [Plotline.Campaign], eligibilityCallback: @escaping ([Plotline.Campaign]) -> ())
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Attributes {
+  public func getUserId() -> Swift.String
+  public func setUserId(userId: Swift.String)
+  public func getDeviceId() -> Swift.String
+  public func setDeviceId(deviceId: Swift.String)
+  public func getAppVersion() -> Swift.String
+  public func setAppVersion(appVersion: Swift.String)
+  public func getIOSVersion() -> Swift.String
+  public func setIOSVersion(iosVersion: Swift.String)
+  public func getSDKVersion() -> Swift.String
+  public func setSDKVersion(sdkVersion: Swift.String)
+  public func getOs() -> Swift.String
+  public func setOs(os: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class SmileyRating : UIKit.UIView {
+  @objc deinit
+}
+public class InitTask {
+  public init(apiKey: Swift.String, userId: Swift.String)
+  public func execute()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class PlotlineFloatingButton : UIKit.UIStackView {
+  @_Concurrency.MainActor(unsafe) public func setClickListener(listener: @escaping () -> ())
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 10.0, *)
+public class CoreDataManager {
+  public static let shared: Plotline.CoreDataManager
+  public func getEvent(eventName: Swift.String) -> Plotline.PEvent?
+  public func insertEvent(eventName: Swift.String)
+  public func updateEvent(eventName: Swift.String)
+  public func getAttribute(attributeName: Swift.String) -> Plotline.PAttribute?
+  public func insertAttribute(attributeName: Swift.String, attributeValue: Swift.String)
+  public func updateAttribute(attributeName: Swift.String, attributeValue: Swift.String?)
+  public func getAttributesWithNames(attributeNameValues: [Swift.String]) -> [Plotline.PAttribute]
+  public func getEventsWithName(eventNameValues: [Swift.String]) -> [Plotline.PEvent]
+  @objc deinit
+}
+public class PEvent {
+  public var eventName: Swift.String
+  public var count: Swift.Int16
+  public var lastUsed: Swift.Int64
+  public var firstUsed: Swift.Int64
+  public init(eventName: Swift.String, count: Swift.Int16, lastUsed: Swift.Int64, firstUsed: Swift.Int64)
+  public init(event: Plotline.PlotlineEvent)
+  public init()
+  @objc deinit
+}
+public protocol InitCallback {
+  func onInitialized()
+}
+@_hasMissingDesignatedInitializers public class Init {
+  public static func initialize(apiKey: Swift.String, userId: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class Plotline : ObjectiveC.NSObject {
+  public var studyWindow: UIKit.UIWindow?
+  public func getApiKey() -> Swift.String?
+  public func setApiKey(sApiKey: Swift.String)
+  public func getEndpoint() -> Swift.String
+  public func setEndpoint(sEndpoint: Swift.String)
+  public func getDefaultAttributes() -> Plotline.Attributes
+  public func getsColors() -> Plotline.Color
+  public func setsColors(sColors: [Swift.String : Swift.String])
+  public func getsLocale() -> Swift.String
+  public func setsLocale(sLocale: Swift.String)
+  public func getEvents() -> Swift.Set<Swift.String>
+  public func setEvents(sEvents: Swift.Set<Swift.String>)
+  public func getMetricEvents() -> Swift.Set<Swift.String>
+  public func setsMetricEvents(sMetricEvents: Swift.Set<Swift.String>)
+  public func getMetricEventsType() -> Swift.String
+  public func setsMetricEventsType(sMetricEventsType: Swift.String)
+  public func setShouldEnableDebug(shouldEnableDebug: Swift.Bool)
+  public func getShouldEnableDebug() -> Swift.Bool
+  public func getFlowStore() -> Plotline.FlowStore
+  public func isShouldEnableFlows() -> Swift.Bool
+  public func setShouldEnableFlows(shouldEnableFlows: Swift.Bool)
+  public func getSearchIntervalMillis() -> Swift.Int64
+  public func setSearchIntervalMillis(searchIntervalMillis: Swift.Int64)
+  public func getCurrentPage() -> Swift.String
+  public func setCurrentPage(currentPage: Swift.String)
+  public func getElementSearchTask() -> Plotline.ElementSearchTask?
+  public func setIsTestUser(isTestUser: Swift.Bool)
+  public func setTestUserToken(testUserToken: Swift.String)
+  public func getIsTestUser() -> Swift.Bool
+  public func getAttributes() -> Swift.Set<Swift.String>
+  public func setAttributes(sAttributes: Swift.Set<Swift.String>)
+  public func getCompositeCodeEventsMap() -> [Swift.String : [[Swift.String : Any]]]
+  public func setCompositeCodeEventsMap(sCompositeCodeEventsMap: [Swift.String : [[Swift.String : Any]]])
+  public func getStudyStore() -> Plotline.StudyStore
+  public func getInitialized() -> Swift.Bool
+  public func setInitialized(initialized: Swift.Bool)
+  public func getStudyShown() -> Swift.Bool
+  public func setStudyShown(studyShown: Swift.Bool)
+  public func isShouldRegisterAttributesEvents() -> Swift.Bool
+  public func setShouldRegisterAttributesEvents(registerAttributesEvents: Swift.Bool)
+  @objc public func registerInitCallback(callback: @escaping () -> ())
+  public func getInitCallbacks() -> [() -> ()]
+  public func clearCallBacks()
+  public static func getInstance() -> Plotline.Plotline
+  public func initKeys(apiKey: Swift.String, userId: Swift.String)
+  public func setDefaultAttributes(appVersion: Swift.String, iosVersion: Swift.String, deviceId: Swift.String)
+  @objc public static func initialize(apiKey: Swift.String, userId: Swift.String)
+  @objc public static func initialize(apiKey: Swift.String, userId: Swift.String, endpoint: Swift.String)
+  @objc public static func track(eventName: Swift.String)
+  @objc public static func track(eventName: Swift.String, properties: [Swift.String : Any])
+  @objc public static func identify(attributes: [Swift.String : Any])
+  public static func getStudyWindow()
+  @objc public static func showMockStudy()
+  @objc public static func setLocale(locale: Swift.String)
+  @objc public static func setColor(colors: [Swift.String : Swift.String])
+  public static func trackPage(pageName: Swift.String)
+  @objc public static func initAlong(url: Foundation.URL)
+  @objc public static func debug(shouldDebug: Swift.Bool)
+  @objc deinit
+}
+public class EligibilityTask {
+  public init(campaigns: [Plotline.Campaign], eligibilityCallback: @escaping ([Plotline.Campaign]) -> ())
+  public func execute()
+  public static func compareString(str1: Swift.String, str2: Swift.String) -> Swift.Int
+  public static func compareLong(value1: Swift.Int64, value2: Swift.Int64) -> Swift.Int
+  public static func compareStrings(s1: Swift.String, s2: Swift.String) -> Swift.Int
+  public func checkEligibilityForCampaign(userFilter: [Plotline.Condition]) -> Swift.Bool
+  @objc deinit
+}
+public class StepLayout {
+  public var isInitialized: Swift.Bool
+  public var offsetX: Swift.Int
+  public var offsetY: Swift.Int
+  public var margin: [Swift.Int]
+  public var padding: [Swift.Int]
+  public var width: Swift.Int
+  public var height: Swift.Int
+  public var alignX: Swift.String
+  public var alignY: Swift.String
+  public var layoutDirection: Swift.String
+  public var value: Swift.String
+  public var layoutType: Swift.String
+  public var styles: Plotline.StepStyles
+  public var layoutWeight: Swift.Int
+  public var layouts: [Plotline.StepLayout]
+  public var onAction: Plotline.StepAction
+  convenience public init()
+  public init(_ json: [Swift.String : Any])
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MultiChoiceSingleCorrect : UIKit.UIView {
+  @objc deinit
+}
+public class StudyStore {
+  public init()
+  public func addData(surveyRawData: [[Swift.String : Any]])
+  @objc deinit
+}
+public class PAttribute {
+  public var attributeName: Swift.String
+  public var attributeValue: Swift.String
+  public init(attributeName: Swift.String, attributeValue: Swift.String)
+  public init(attribute: Plotline.Attribute)
+  public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Track {
+  public static func trackTask(eventName: Swift.String, properties: [Swift.String : Any]?)
+  public static func track(eventName: Swift.String)
+  public static func track(eventName: Swift.String, properties: [Swift.String : Any])
+  public static func checkEligibilityAndTriggerCampaign(campaigns: [Plotline.Campaign], eventName: Swift.String?, eligibleEvents: Swift.Set<Swift.String>, properties: [Swift.String : Any]?)
+  public static func triggerCampaign(eligibleStudyIds: [Swift.String], eligibleFlowIds: [Swift.String], eventName: Swift.String?, compositeEvents: Swift.Set<Swift.String>?, properties: [Swift.String : Any]?)
+  @objc deinit
+}
+public class Flow : Plotline.Campaign {
+  public var clientElementId: Swift.String
+  public var clientFragmentId: Swift.String
+  public var flowType: Swift.String
+  public static var FLOW_TYPE_PAGE: Swift.String
+  public static var FLOW_TYPE_ELEMENT: Swift.String
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+public class Condition {
+  public var type: Swift.String?
+  public var key: Swift.String?
+  public var aggregate: Swift.String?
+  public var relation: Swift.String?
+  public var value: Swift.String?
+  public var pOperator: Swift.String?
+  public static let VAL_ATTRIBUTE: Swift.String
+  public static let VAL_EVENT: Swift.String
+  public static let VAL_OPERATOR: Swift.String
+  public static let VAL_PROPERTY: Swift.String
+  public init(condition: [Swift.String : Any])
+  public init(type: Swift.String, key: Swift.String, aggregate: Swift.String, relation: Swift.String, value: Swift.String, pOperator: Swift.String)
+  public static func convertConditionJSONArray(array: [[Swift.String : Any]]) -> [Plotline.Condition]
+  @objc deinit
+}
+public class FlowStore {
+  public var flows: [Swift.String : Plotline.Flow]
+  public var triggerEvents: [Swift.String : Swift.Set<Swift.String>]
+  public var activeFlowQueue: Plotline.Queue<Plotline.FlowStep>
+  public var activeFlowId: Swift.String
+  public init()
+  public func addData(flowData: [[Swift.String : Any]])
+  public func addQueue(flowId: Swift.String, flowStepsData: [Any])
+  public func actOnQueue(compositeTriggerEvents: Swift.Set<Swift.String>?)
+  public func showFlowStep(view: UIKit.UIView)
+  @_hasMissingDesignatedInitializers public class FlowStepListenerImpl : Plotline.FlowStepListener {
+    public func onShow(currentStepId: Swift.String)
+    public func endFlow(String currentStepId: Swift.String)
+    public func goToStep(currentStepId: Swift.String, nextStepId: Swift.String)
+    @objc deinit
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class DummyClass {
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class OpenText : UIKit.UIView, UIKit.UITextViewDelegate {
+  @_Concurrency.MainActor(unsafe) @objc public func textViewDidBeginEditing(_ textbox: UIKit.UITextView)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Rating : UIKit.UIView {
+  @objc deinit
+}
+public class Study : Plotline.Campaign {
+  public var studyId: Swift.String
+  public init(studyObject: [Swift.String : Any])
+  @objc deinit
+}
+public protocol APICompletionCallback {
+  func onCompletion(value: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class PlotlineNetworkHelper {
+  public static func initialize(callback: @escaping ([Swift.String : Any]) -> Swift.Void)
+  public static func registerEvent(eventName: Swift.String, propertyKeys: [Swift.String]?)
+  public static func registerAttributes(attributes: [Swift.String])
+  public static func triggerCampaign(eligibleFlowIds: [Swift.String], eligibleStudyIds: [Swift.String], triggerEvent: Swift.String?, properties: [Swift.String : Any]?, callback: @escaping ([Swift.String : Any]) -> ())
+  public static func sendResponse(studyId: Swift.String, questionId: Swift.String, answer: [Swift.String], isCompleted: Swift.Bool)
+  public static func uploadScreenshotImage(clientPageId: Swift.String, imgFile: Swift.String, callback: @escaping (Swift.String) -> ())
+  public static func registerPage(imgPath: Swift.String, clientPageId: Swift.String, pageHeight: Swift.Int, pageWidth: Swift.Int, pageElements: [[Swift.String : Any]], pageOrientation: Swift.String)
+  public static func saveFlowAction(flowId: Swift.String, stepId: Swift.String, actionType: Swift.String, action: Swift.String, isCompleted: Swift.Bool)
+  public static func trackEvent(eventsDataList: [[Swift.String : Any]])
+  @objc deinit
+}
+public class StepAction {
+  public var action: Swift.String
+  public var effect: Swift.String
+  public var target: Swift.String
+  public var platform: Swift.String
+  convenience public init()
+  public init(_ json: [Swift.String : Any])
+  @objc deinit
+}
+public class QuestionModal {
+  public func getQuestionLayout() -> UIKit.UIView?
+  public init(questionIndex: Swift.Int, questions: [Plotline.Question], answerListener: Plotline.AnswerListener, hidePlotline: Swift.Bool)
+  @objc deinit
+}
+public enum PopoverOption {
+  case arrowSize(CoreGraphics.CGSize)
+  case animationIn(Foundation.TimeInterval)
+  case animationOut(Foundation.TimeInterval)
+  case cornerRadius(CoreGraphics.CGFloat)
+  case sideEdge(CoreGraphics.CGFloat)
+  case blackOverlayColor(UIKit.UIColor)
+  case overlayBlur(UIKit.UIBlurEffect.Style)
+  case type(Plotline.ArrowDirection)
+  case color(UIKit.UIColor)
+  case dismissOnBlackOverlayTap(Swift.Bool)
+  case showBlackOverlay(Swift.Bool)
+  case springDamping(CoreGraphics.CGFloat)
+  case initialSpringVelocity(CoreGraphics.CGFloat)
+  case sideOffset(CoreGraphics.CGFloat)
+  case borderColor(UIKit.UIColor)
+}
+@objc public enum ArrowDirection : Swift.Int {
+  case up
+  case down
+  case left
+  case right
+  case auto
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @objcMembers @_Concurrency.MainActor(unsafe) open class PlotlineTooltipView : UIKit.UIView, Plotline.PlotlineViewListener {
+  @objc @_Concurrency.MainActor(unsafe) public func show()
+  @objc @_Concurrency.MainActor(unsafe) public func isShowing() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func onAction(stepId: Swift.String?, action: Swift.String?, effect: Swift.String?, target: Swift.String?, platform: Swift.String?, requireDismiss: Swift.Bool, isDismissed: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) open var arrowSize: CoreGraphics.CGSize
+  @objc @_Concurrency.MainActor(unsafe) open var animationIn: Swift.Double
+  @objc @_Concurrency.MainActor(unsafe) open var animationOut: Swift.Double
+  @objc @_Concurrency.MainActor(unsafe) open var cornerRadius: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) open var sideEdge: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) open var popoverType: Plotline.ArrowDirection
+  @objc @_Concurrency.MainActor(unsafe) open var blackOverlayColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) open var overlayBlur: UIKit.UIBlurEffect?
+  @objc @_Concurrency.MainActor(unsafe) open var popoverColor: UIKit.UIColor
+  @objc @_Concurrency.MainActor(unsafe) open var dismissOnBlackOverlayTap: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open var showBlackOverlay: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open var highlightFromView: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open var highlightCornerRadius: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) open var springDamping: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) open var initialSpringVelocity: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) open var sideOffset: CoreGraphics.CGFloat
+  @objc @_Concurrency.MainActor(unsafe) open var borderColor: UIKit.UIColor?
+  @_Concurrency.MainActor(unsafe) open var arrowPoint: CoreGraphics.CGPoint?
+  @_Concurrency.MainActor(unsafe) open var mFlowStep: Plotline.FlowStep?
+  @objc @_Concurrency.MainActor(unsafe) open var mDismissOnOutsideTouch: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open var mDismissOnInsideTouch: Swift.Bool
+  @_Concurrency.MainActor(unsafe) open var mActionListener: Plotline.ActionListener?
+  @_Concurrency.MainActor(unsafe) open var mAnchorRect: CoreGraphics.CGRect?
+  @objc @_Concurrency.MainActor(unsafe) open var willShowHandler: (() -> ())?
+  @objc @_Concurrency.MainActor(unsafe) open var willDismissHandler: (() -> ())?
+  @objc @_Concurrency.MainActor(unsafe) open var didShowHandler: (() -> ())?
+  @objc @_Concurrency.MainActor(unsafe) open var didDismissHandler: (() -> ())?
+  @objc @_Concurrency.MainActor(unsafe) public var blackOverlay: UIKit.UIView {
+    get
+  }
+  @objc dynamic public init()
+  @_Concurrency.MainActor(unsafe) public init(builder: Plotline.PlotlineTooltipView.Builder)
+  @objc @_Concurrency.MainActor(unsafe) public init(showHandler: (() -> ())?, dismissHandler: (() -> ())?)
+  @_Concurrency.MainActor(unsafe) public init(options: [Plotline.PopoverOption]?, showHandler: (() -> ())? = nil, dismissHandler: (() -> ())? = nil)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) open func showAsDialog(_ contentView: UIKit.UIView)
+  @objc @_Concurrency.MainActor(unsafe) open func showAsDialog(_ contentView: UIKit.UIView, inView: UIKit.UIView)
+  @objc @_Concurrency.MainActor(unsafe) open func show(_ contentView: UIKit.UIView, fromView: UIKit.UIView)
+  @objc @_Concurrency.MainActor(unsafe) open func show(_ contentView: UIKit.UIView, fromView: UIKit.UIView, inView: UIKit.UIView)
+  @objc @_Concurrency.MainActor(unsafe) open func show(_ contentView: UIKit.UIView, point: CoreGraphics.CGPoint)
+  @objc @_Concurrency.MainActor(unsafe) open func show(_ contentView: UIKit.UIView, point: CoreGraphics.CGPoint, inView: UIKit.UIView)
+  @objc override dynamic open func accessibilityPerformEscape() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open func onOutsideTouch()
+  @objc @_Concurrency.MainActor(unsafe) open func onInsideTouch()
+  @objc @_Concurrency.MainActor(unsafe) open func dismiss()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func draw(_ rect: CoreGraphics.CGRect)
+  public class Builder {
+    public init(rootView: UIKit.UIView)
+    public func build() -> Plotline.PlotlineTooltipView
+    public func anchorRect(anchorRect: CoreGraphics.CGRect) -> Plotline.PlotlineTooltipView.Builder
+    public func flowStep(flowStep: Plotline.FlowStep) -> Plotline.PlotlineTooltipView.Builder
+    public func actionListener(actionListener: Plotline.ActionListener) -> Plotline.PlotlineTooltipView.Builder
+    @objc deinit
+  }
+  @objc deinit
+}
+public protocol AnswerListener {
+  func onAnswer(questionType: Swift.String, questionIndex: Swift.Int, isDone: Swift.Bool, answer: [Swift.String])
+}
+public class ScreenshotTask {
+  public init(listener: @escaping () -> (), screenImage: UIKit.UIImage, elements: [[Swift.String : Any]])
+  public func execute()
+  public static func getAllElements(view: UIKit.UIView) -> [[Swift.String : Any]]
+  @objc deinit
+}
+public class FlowStep {
+  public var isInitialized: Swift.Bool
+  public var stepId: Swift.String
+  public var stepType: Swift.String
+  public var triggerEvents: [Swift.String]
+  public var clientElementId: Swift.String
+  public var clientFragmentId: Swift.String
+  public var delay: Swift.Int
+  public var dismissAfter: Swift.Int
+  public var showBackdrop: Swift.Bool
+  public var backdropColor: Swift.String
+  public var showCloseButton: Swift.Bool
+  public var closeButtonColor: Swift.String
+  public var closeButtonSize: Swift.Int
+  public var position: Swift.String
+  public var transitionIn: Swift.String
+  public var transitionOut: Swift.String
+  public var arrowWidth: Swift.Int
+  public var arrowHeight: Swift.Int
+  public var layout: Plotline.StepLayout
+  public var showAnimation: Swift.Bool
+  public var spotlightRadius: Swift.Int
+  public var spotlightPadding: Swift.Int
+  public static var TRANSITION_FADE: Swift.String
+  public static var TRANSITION_SCALE: Swift.String
+  public static var TRANSITION_NONE: Swift.String
+  public static var TYPE_TOOLTIP: Swift.String
+  public static var TYPE_MODAL: Swift.String
+  public static var TYPE_BADGE: Swift.String
+  public static var TYPE_BOTTOMSHEET: Swift.String
+  public static var TYPE_COACHMARK: Swift.String
+  public static var TYPE_SPOTLIGHT: Swift.String
+  public static var TYPES_ELEMENT: [Swift.String]
+  public init(json: [Swift.String : Any])
+  @objc deinit
+}
+public class Question {
+  public var questionId: Swift.String?
+  public var questionType: Swift.String?
+  public var options: [[Swift.String : Any]]?
+  public var question: Swift.String?
+  public var description: Swift.String?
+  public var skipLogic: [[Swift.String : Any]]?
+  public var buttonText: Swift.String?
+  public var textPlaceholder: Swift.String?
+  public var scaleRangeStart: Swift.Int?
+  public var scaleRangeEnd: Swift.Int?
+  public var lowLabel: Swift.String?
+  public var highLabel: Swift.String?
+  public var requestPermission: Swift.Bool?
+  public var maxRecordingTime: Swift.Int?
+  public static let TYPE_MCQ_SINGLE: Swift.String
+  public static let TYPE_MCQ_MULTIPLE: Swift.String
+  public static let TYPE_OPEN_TEXT: Swift.String
+  public static let TYPE_PROMPT: Swift.String
+  public static let TYPE_RATING: Swift.String
+  public static let TYPE_SMILEY_RATING: Swift.String
+  public init(questionId: Swift.String, questionType: Swift.String, options: [[Swift.String : Any]], question: Swift.String, description: Swift.String, skipLogic: [[Swift.String : Any]], buttonText: Swift.String, textPlaceholder: Swift.String, scaleRangeStart: Swift.Int, scaleRangeEnd: Swift.Int, lowLabel: Swift.String, highLabel: Swift.String, requestPermission: Swift.Bool, maxRecordingTime: Swift.Int)
+  public static func getQuestions(questions: [[Swift.String : Any]]) -> [Plotline.Question]
+  public static func getMockQuestions() -> [Plotline.Question]
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class ThankYouView : UIKit.UIView {
+  @objc deinit
+}
+public class ElementSearchObject {
+  public var flowId: Swift.String
+  public var clientPageId: Swift.String
+  public var clientFragmentId: Swift.String
+  public var clientElementId: Swift.String
+  public var isActiveFlow: Swift.Bool
+  public init(flowId: Swift.String, clientPageId: Swift.String, clientFragmentId: Swift.String, clientElementId: Swift.String)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ElementSearchTask : ObjectiveC.NSObject, UIKit.UIScrollViewDelegate {
+  @objc override dynamic public init()
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) public func getCurrentViewController() -> UIKit.UIViewController?
+  @_Concurrency.MainActor(unsafe) public func intervalFunction()
+  @_Concurrency.MainActor(unsafe) public func runNextLoop()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(Attribute) public class Attribute : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Plotline.Attribute {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.Attribute>
+  @objc @NSManaged dynamic public var attributeName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var attributeValue: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(PlotlineEvent) public class PlotlineEvent : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension Plotline.PlotlineEvent {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<Plotline.PlotlineEvent>
+  @objc @NSManaged dynamic public var count: Swift.Int16 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var eventName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var firstUsed: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var lastUsed: Swift.Int64 {
+    @objc get
+    @objc set
+  }
+}
+extension Plotline.ArrowDirection : Swift.Equatable {}
+extension Plotline.ArrowDirection : Swift.Hashable {}
+extension Plotline.ArrowDirection : Swift.RawRepresentable {}
