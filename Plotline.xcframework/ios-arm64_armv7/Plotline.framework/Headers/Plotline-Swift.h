@@ -283,7 +283,6 @@ SWIFT_CLASS("_TtC8Plotline8OpenText")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
-@class NSURL;
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
@@ -298,7 +297,7 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 + (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
-+ (void)initAlongUrl:(NSURL * _Nonnull)url SWIFT_METHOD_FAMILY(none);
++ (void)initAlong SWIFT_METHOD_FAMILY(none);
 + (void)debugWithShouldDebug:(BOOL)shouldDebug;
 @end
 
@@ -700,7 +699,6 @@ SWIFT_CLASS("_TtC8Plotline8OpenText")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
-@class NSURL;
 
 SWIFT_CLASS("_TtC8Plotline8Plotline")
 @interface Plotline : NSObject
@@ -715,7 +713,7 @@ SWIFT_CLASS("_TtC8Plotline8Plotline")
 + (void)showMockStudy;
 + (void)setLocaleWithLocale:(NSString * _Nonnull)locale;
 + (void)setColorWithColors:(NSDictionary<NSString *, NSString *> * _Nonnull)colors;
-+ (void)initAlongUrl:(NSURL * _Nonnull)url SWIFT_METHOD_FAMILY(none);
++ (void)initAlong SWIFT_METHOD_FAMILY(none);
 + (void)debugWithShouldDebug:(BOOL)shouldDebug;
 @end
 

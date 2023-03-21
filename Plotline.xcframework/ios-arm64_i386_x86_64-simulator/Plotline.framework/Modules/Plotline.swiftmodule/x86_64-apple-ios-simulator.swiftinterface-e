@@ -240,7 +240,7 @@ public protocol InitCallback {
   @objc public static func setLocale(locale: Swift.String)
   @objc public static func setColor(colors: [Swift.String : Swift.String])
   public static func trackPage(pageName: Swift.String)
-  @objc public static func initAlong(url: Foundation.URL)
+  @objc public static func initAlong()
   @objc public static func debug(shouldDebug: Swift.Bool)
   @objc deinit
 }
