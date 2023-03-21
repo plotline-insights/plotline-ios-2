@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 	}
     s.ios.deployment_target  = '9.0'
     s.source       = {
-                        :git => "https://github.com/plotline-insights/plotline-ios.git",
+                        :git => "https://github.com/plotline-insights/plotline-ios-2.git",
 			:tag => "#{s.version}"
                      }
     s.vendored_frameworks = 'Plotline.xcframework'
