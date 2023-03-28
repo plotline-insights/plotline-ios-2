@@ -40,8 +40,30 @@ public class StepStyles {
   public init(_ json: [Swift.String : Any])
   @objc deinit
 }
+public protocol PlotlineScreenshotCallback {
+  func onScreenshot(for view: UIKit.UIView, completion: @escaping (UIKit.UIImage?) -> Swift.Void)
+}
+public protocol PlotlineViewPositionCallback {
+  func getAllElements(for view: UIKit.UIView, plotlineScreenshotPositionsCompleteListener: @escaping ([[Swift.String : Any]]) -> ())
+  func getViewPosition(for view: UIKit.UIView, fragmentId: Swift.String, viewId: Swift.String, plotlineViewPositionCompleteListener: @escaping (CoreGraphics.CGRect?) -> Swift.Void)
+  func isViewPresent(for view: UIKit.UIView, accessibilityIdentifier: Swift.String) -> Swift.Bool
+  func areViewsPresent(for view: UIKit.UIView, elementSearchObjects: [Plotline.ElementSearchObject], plotlineViewsPresenceListener: @escaping ([Plotline.ElementSearchObject]) -> ())
+  func getView(for view: UIKit.UIView, fragmentId: Swift.String, viewId: Swift.String) -> UIKit.UIView?
+}
+@_hasMissingDesignatedInitializers public class PlotlineInternal {
+  public static let shared: Plotline.PlotlineInternal
+  public func getScreenshotCallback() -> Plotline.PlotlineScreenshotCallback
+  public func getViewPositionCallback() -> Plotline.PlotlineViewPositionCallback
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers public class PostfixEvaluation {
   public static func evaluatePostfix(exp: [Plotline.Condition]) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CoachRingRenderer : ObjectiveC.NSObject {
+  @objc dynamic public class func drawCoachRing(ringColor: UIKit.UIColor = UIColor(red: 0.000, green: 0.387, blue: 0.742, alpha: 0.737), controlRadius: CoreGraphics.CGFloat = 20, controlCenter: CoreGraphics.CGPoint = CGPoint(x: 199, y: 137), ringRadius: CoreGraphics.CGFloat = 144, ringCenter: CoreGraphics.CGPoint = CGPoint(x: 179, y: 171))
+  @objc dynamic public class func drawCoachRingEcho(ringEchoColor: UIKit.UIColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 1.000), controlRadius: CoreGraphics.CGFloat = 20, ringRadius: CoreGraphics.CGFloat = 144, ringCenter: CoreGraphics.CGPoint = CGPoint(x: 179, y: 171), echoOpacity: CoreGraphics.CGFloat = 0.491)
+  @objc override dynamic public init()
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class MultiChoiceMultiCorrect : UIKit.UIView {
@@ -68,9 +90,16 @@ public class AttributeTask {
   public static func currentTimeInMilliSeconds() -> Swift.Int64
   @objc deinit
 }
+public struct CoachRing {
+  public var radius: CoreGraphics.CGFloat
+  public var center: CoreGraphics.CGPoint
+  public let controlCenter: CoreGraphics.CGPoint
+  public let controlRadius: CoreGraphics.CGFloat
+  public init?(controlCenter c: CoreGraphics.CGPoint, controlRadius cr: CoreGraphics.CGFloat, innerRect ir: CoreGraphics.CGRect, outerRect or: CoreGraphics.CGRect, overlappingAllowed: Swift.Bool = true, excenterShift: CoreGraphics.CGPoint? = nil, excenterRadius: CoreGraphics.CGFloat? = nil)
+}
 public protocol FlowStepListener {
   func onShow(currentStepId: Swift.String)
-  func endFlow(String currentStepId: Swift.String)
+  func endFlow(currentStepId: Swift.String)
   func goToStep(currentStepId: Swift.String, nextStepId: Swift.String)
 }
 public protocol PlotlineViewListener {
@@ -125,6 +154,8 @@ public class Campaign {
   public init(json: [Swift.String : Any], id: Swift.String, campaignType: Swift.String)
   public static func checkEligibility(campaigns: [Plotline.Campaign], eligibilityCallback: @escaping ([Plotline.Campaign]) -> ())
   @objc deinit
+}
+public struct MarkInfo {
 }
 @_hasMissingDesignatedInitializers public class Attributes {
   public func getUserId() -> Swift.String
@@ -303,6 +334,14 @@ public class PAttribute {
   public static func triggerCampaign(eligibleStudyIds: [Swift.String], eligibleFlowIds: [Swift.String], eventName: Swift.String?, compositeEvents: Swift.Set<Swift.String>?, properties: [Swift.String : Any]?)
   @objc deinit
 }
+public protocol CoachMarkInfoView : UIKit.UIView {
+  var viewSize: CoreGraphics.CGSize { get }
+  var centerOffset: CoreGraphics.CGPoint { get }
+  func setInfo(_ info: Any)
+  func setTextInfo(title: Swift.String, info: Swift.String)
+  func setTitleStyle(font: UIKit.UIFont, color: UIKit.UIColor)
+  func setInfoStyle(font: UIKit.UIFont, color: UIKit.UIColor)
+}
 public class Flow : Plotline.Campaign {
   public var clientElementId: Swift.String
   public var clientFragmentId: Swift.String
@@ -340,7 +379,7 @@ public class FlowStore {
   public func showFlowStep(view: UIKit.UIView)
   @_hasMissingDesignatedInitializers public class FlowStepListenerImpl : Plotline.FlowStepListener {
     public func onShow(currentStepId: Swift.String)
-    public func endFlow(String currentStepId: Swift.String)
+    public func endFlow(currentStepId: Swift.String)
     public func goToStep(currentStepId: Swift.String, nextStepId: Swift.String)
     @objc deinit
   }
@@ -413,6 +452,7 @@ public enum PopoverOption {
   case left
   case right
   case auto
+  case center
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -503,6 +543,7 @@ public class FlowStep {
   public var showCloseButton: Swift.Bool
   public var closeButtonColor: Swift.String
   public var closeButtonSize: Swift.Int
+  public var closeButtonPadding: Swift.Int
   public var position: Swift.String
   public var transitionIn: Swift.String
   public var transitionOut: Swift.String

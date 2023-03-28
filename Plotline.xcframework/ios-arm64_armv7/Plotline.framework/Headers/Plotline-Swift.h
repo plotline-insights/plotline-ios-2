@@ -226,6 +226,7 @@ typedef SWIFT_ENUM(NSInteger, ArrowDirection, open) {
   ArrowDirectionLeft = 2,
   ArrowDirectionRight = 3,
   ArrowDirectionAuto = 4,
+  ArrowDirectionCenter = 5,
 };
 
 @class NSEntityDescription;
@@ -241,6 +242,15 @@ SWIFT_CLASS_NAMED("Attribute")
 @interface Attribute (SWIFT_EXTENSION(Plotline))
 @property (nonatomic, copy) NSString * _Nullable attributeName;
 @property (nonatomic, copy) NSString * _Nullable attributeValue;
+@end
+
+@class UIColor;
+
+SWIFT_CLASS("_TtC8Plotline17CoachRingRenderer")
+@interface CoachRingRenderer : NSObject
++ (void)drawCoachRingWithRingColor:(UIColor * _Nonnull)ringColor controlRadius:(CGFloat)controlRadius controlCenter:(CGPoint)controlCenter ringRadius:(CGFloat)ringRadius ringCenter:(CGPoint)ringCenter;
++ (void)drawCoachRingEchoWithRingEchoColor:(UIColor * _Nonnull)ringEchoColor controlRadius:(CGFloat)controlRadius ringRadius:(CGFloat)ringRadius ringCenter:(CGPoint)ringCenter echoOpacity:(CGFloat)echoOpacity;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIScrollView;
@@ -326,7 +336,6 @@ SWIFT_CLASS("_TtC8Plotline22PlotlineFloatingButton")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
-@class UIColor;
 @class UIBlurEffect;
 
 SWIFT_CLASS("_TtC8Plotline19PlotlineTooltipView")
@@ -404,6 +413,8 @@ SWIFT_CLASS("_TtC8Plotline12ThankYouView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
+
+
 
 
 
@@ -645,6 +656,7 @@ typedef SWIFT_ENUM(NSInteger, ArrowDirection, open) {
   ArrowDirectionLeft = 2,
   ArrowDirectionRight = 3,
   ArrowDirectionAuto = 4,
+  ArrowDirectionCenter = 5,
 };
 
 @class NSEntityDescription;
@@ -660,6 +672,15 @@ SWIFT_CLASS_NAMED("Attribute")
 @interface Attribute (SWIFT_EXTENSION(Plotline))
 @property (nonatomic, copy) NSString * _Nullable attributeName;
 @property (nonatomic, copy) NSString * _Nullable attributeValue;
+@end
+
+@class UIColor;
+
+SWIFT_CLASS("_TtC8Plotline17CoachRingRenderer")
+@interface CoachRingRenderer : NSObject
++ (void)drawCoachRingWithRingColor:(UIColor * _Nonnull)ringColor controlRadius:(CGFloat)controlRadius controlCenter:(CGPoint)controlCenter ringRadius:(CGFloat)ringRadius ringCenter:(CGPoint)ringCenter;
++ (void)drawCoachRingEchoWithRingEchoColor:(UIColor * _Nonnull)ringEchoColor controlRadius:(CGFloat)controlRadius ringRadius:(CGFloat)ringRadius ringCenter:(CGPoint)ringCenter echoOpacity:(CGFloat)echoOpacity;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIScrollView;
@@ -745,7 +766,6 @@ SWIFT_CLASS("_TtC8Plotline22PlotlineFloatingButton")
 - (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
 
-@class UIColor;
 @class UIBlurEffect;
 
 SWIFT_CLASS("_TtC8Plotline19PlotlineTooltipView")
@@ -823,6 +843,8 @@ SWIFT_CLASS("_TtC8Plotline12ThankYouView")
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 @end
+
+
 
 
 
