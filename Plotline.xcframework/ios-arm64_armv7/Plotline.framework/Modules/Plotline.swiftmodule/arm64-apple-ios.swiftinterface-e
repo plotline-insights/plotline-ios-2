@@ -52,6 +52,8 @@ public protocol PlotlineViewPositionCallback {
 }
 @_hasMissingDesignatedInitializers public class PlotlineInternal {
   public static let shared: Plotline.PlotlineInternal
+  public func setPositionCallback(_ callback: Plotline.PlotlineViewPositionCallback)
+  public func setScreenshotCallback(_ callback: Plotline.PlotlineScreenshotCallback)
   public func getScreenshotCallback() -> Plotline.PlotlineScreenshotCallback
   public func getViewPositionCallback() -> Plotline.PlotlineViewPositionCallback
   @objc deinit
