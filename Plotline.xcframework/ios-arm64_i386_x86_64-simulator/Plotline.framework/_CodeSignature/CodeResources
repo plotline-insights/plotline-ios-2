@@ -14,7 +14,7 @@
 		</data>
 		<key>Headers/Plotline-Swift.h</key>
 		<data>
-		LRk4tinTSJp090rw331xu0auHMg=
+		TBb30dSFjXdbZKwm79BDYzY6xHQ=
 		</data>
 		<key>Headers/Plotline.h</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zrlZsXECYaPZjFzYLn/414S2JgI=
+		Hr6f+jMBrIYFo6CUDHG0Gcbsp44=
 		</data>
 		<key>Modules/Plotline.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pAiCW/KaSyIwovusJd5x8eIwzGw=
+		34+bsxlKfWj3/uhm4DW/29sS0rc=
 		</data>
 		<key>Modules/Plotline.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/Plotline.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		K2fpLLgGUfw5jbTNef+Zvg50nT4=
+		FYL9OCER3ZReNp+4KYS8UiuVS7U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -121,11 +121,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LRk4tinTSJp090rw331xu0auHMg=
+			TBb30dSFjXdbZKwm79BDYzY6xHQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			WAMEJHmMzsmQn3/Zkq17oHrbm/EJCZIp9wPv6OFdObg=
+			YlzqCBQm2bfUkwb2NL1anvH4vuuLM/4vQQ+Je773Y58=
 			</data>
 		</dict>
 		<key>Headers/Plotline.h</key>
@@ -165,11 +165,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zrlZsXECYaPZjFzYLn/414S2JgI=
+			Hr6f+jMBrIYFo6CUDHG0Gcbsp44=
 			</data>
 			<key>hash2</key>
 			<data>
-			rHoaGvkvBW15tRnaAM4d51cDfWeavFXTpyWfw+yalmw=
+			GtukTxDiaoa/Y3sC5F09Uua0sLhURls222YO3pbR0Hc=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
@@ -198,11 +198,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			pAiCW/KaSyIwovusJd5x8eIwzGw=
+			34+bsxlKfWj3/uhm4DW/29sS0rc=
 			</data>
 			<key>hash2</key>
 			<data>
-			YkGTdmKhQLHWNSEebuOoUQXb2CDtjr/cSvg7tZD7HI8=
+			LI9+s83rcmBO/itsCvNKO5Uhr6eK1dOL3TePGioqsK8=
 			</data>
 		</dict>
 		<key>Modules/Plotline.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -231,11 +231,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			K2fpLLgGUfw5jbTNef+Zvg50nT4=
+			FYL9OCER3ZReNp+4KYS8UiuVS7U=
 			</data>
 			<key>hash2</key>
 			<data>
-			Xc8UYSp/CErUbhf9+vg1wjeZklXTXNsNzJEkjoS93Fo=
+			14yXiytUiIQlT27v+i2Ie8gsGkyW7125aCvFpT3oh2Q=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
