@@ -3,12 +3,9 @@
 // swift-module-flags: -target arm64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Plotline
 import AVFoundation
 import CoreData
-import Dispatch
 import Foundation
-import MobileCoreServices
 @_exported import Plotline
 import Swift
-import SystemConfiguration
 import UIKit
 import _Concurrency
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Prompt : UIKit.UIView {
@@ -90,6 +87,7 @@ public class AttributeTask {
 }
 @_hasMissingDesignatedInitializers public class Utils {
   public static func currentTimeInMilliSeconds() -> Swift.Int64
+  public static func getQueryParameter(url: Foundation.URL, paramName: Swift.String) -> Swift.String?
   @objc deinit
 }
 public struct CoachRing {
@@ -251,6 +249,7 @@ public protocol InitCallback {
   public func setIsTestUser(isTestUser: Swift.Bool)
   public func setTestUserToken(testUserToken: Swift.String)
   public func getIsTestUser() -> Swift.Bool
+  public func getTestUserToken() -> Swift.String
   public func getAttributes() -> Swift.Set<Swift.String>
   public func setAttributes(sAttributes: Swift.Set<Swift.String>)
   public func getCompositeCodeEventsMap() -> [Swift.String : [[Swift.String : Any]]]
@@ -278,7 +277,7 @@ public protocol InitCallback {
   @objc public static func setLocale(locale: Swift.String)
   @objc public static func setColor(colors: [Swift.String : Swift.String])
   @objc public static func trackPage(pageName: Swift.String)
-  @objc public static func initAlong()
+  @objc public static func initAlong(_ url: Foundation.URL)
   @objc public static func debug(shouldDebug: Swift.Bool)
   @objc deinit
 }
@@ -339,10 +338,10 @@ public class PAttribute {
 public protocol CoachMarkInfoView : UIKit.UIView {
   var viewSize: CoreGraphics.CGSize { get }
   var centerOffset: CoreGraphics.CGPoint { get }
-  func setInfo(_ info: Any)
-  func setTextInfo(title: Swift.String, info: Swift.String)
-  func setTitleStyle(font: UIKit.UIFont, color: UIKit.UIColor)
-  func setInfoStyle(font: UIKit.UIFont, color: UIKit.UIColor)
+  func setText(title: Swift.String, fontFamily: Swift.String, fontSize: CoreGraphics.CGFloat, textDecoration: [Swift.String])
+  func setInfo(info: Swift.String, fontFamily: Swift.String, fontSize: CoreGraphics.CGFloat, textDecoration: [Swift.String])
+  func setTitleColor(color: UIKit.UIColor)
+  func setInfoColor(color: UIKit.UIColor)
 }
 public class Flow : Campaign {
   public var clientElementId: Swift.String
@@ -402,10 +401,8 @@ public class Study : Campaign {
   public init(studyObject: [Swift.String : Any])
   @objc deinit
 }
-public protocol APICompletionCallback {
-  func onCompletion(value: Swift.String)
-}
 @_hasMissingDesignatedInitializers public class PlotlineNetworkHelper {
+  public static func getHeaders() -> [Swift.String : Any]
   public static func initialize(callback: @escaping ([Swift.String : Any]) -> Swift.Void)
   public static func registerEvent(eventName: Swift.String, propertyKeys: [Swift.String]?)
   public static func registerAttributes(attributes: [Swift.String])
