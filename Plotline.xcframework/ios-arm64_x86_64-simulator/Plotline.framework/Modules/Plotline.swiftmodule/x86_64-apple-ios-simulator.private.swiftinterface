@@ -582,6 +582,10 @@ public class Question {
   public var highLabel: Swift.String?
   public var requestPermission: Swift.Bool?
   public var maxRecordingTime: Swift.Int?
+  public var isColoured: Swift.Bool
+  public var promoterColor: Swift.String
+  public var passiveColor: Swift.String
+  public var detractorColor: Swift.String
   public static let TYPE_MCQ_SINGLE: Swift.String
   public static let TYPE_MCQ_MULTIPLE: Swift.String
   public static let TYPE_OPEN_TEXT: Swift.String
