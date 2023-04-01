@@ -286,10 +286,15 @@ public protocol InitCallback {
   @objc deinit
 }
 @available(iOS 13.0, *)
-public struct PLabel : SwiftUI.ViewModifier {
-  @_Concurrency.MainActor(unsafe) public func body(content: PLabel.Content) -> some SwiftUI.View
+public struct PLabelInternal : SwiftUI.ViewModifier {
+  @_Concurrency.MainActor(unsafe) public func body(content: PLabelInternal.Content) -> some SwiftUI.View
   
-  public typealias Body = @_opaqueReturnTypeOf("$s8Plotline6PLabelV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
+  public typealias Body = @_opaqueReturnTypeOf("$s8Plotline14PLabelInternalV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
+}
+@available(iOS 13.0, *)
+extension SwiftUI.View {
+  public func PLabel(_ label: Swift.String) -> some SwiftUI.View
+  
 }
 public class EligibilityTask {
   public init(campaigns: [Campaign], eligibilityCallback: @escaping ([Campaign]) -> ())

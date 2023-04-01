@@ -9844,8 +9844,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "PLabel",
-        "printedName": "PLabel",
+        "name": "PLabelInternal",
+        "printedName": "PLabelInternal",
         "children": [
           {
             "kind": "Function",
@@ -9855,18 +9855,18 @@
               {
                 "kind": "TypeNominal",
                 "name": "ModifiedContent",
-                "printedName": "SwiftUI.ModifiedContent<SwiftUI._ViewModifier_Content<Plotline.PLabel>, SwiftUI._OverlayModifier<SwiftUI.ModifiedContent<SwiftUI.GeometryReader<SwiftUI.Color>, SwiftUI._AppearanceActionModifier>>>",
+                "printedName": "SwiftUI.ModifiedContent<SwiftUI._ViewModifier_Content<Plotline.PLabelInternal>, SwiftUI._OverlayModifier<SwiftUI.ModifiedContent<SwiftUI.GeometryReader<SwiftUI.Color>, SwiftUI._AppearanceActionModifier>>>",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "_ViewModifier_Content",
-                    "printedName": "SwiftUI._ViewModifier_Content<Plotline.PLabel>",
+                    "printedName": "SwiftUI._ViewModifier_Content<Plotline.PLabelInternal>",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "PLabel",
-                        "printedName": "Plotline.PLabel",
-                        "usr": "s:8Plotline6PLabelV"
+                        "name": "PLabelInternal",
+                        "printedName": "Plotline.PLabelInternal",
+                        "usr": "s:8Plotline14PLabelInternalV"
                       }
                     ],
                     "usr": "s:7SwiftUI21_ViewModifier_ContentV"
@@ -9913,21 +9913,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "_ViewModifier_Content",
-                "printedName": "SwiftUI._ViewModifier_Content<Plotline.PLabel>",
+                "printedName": "SwiftUI._ViewModifier_Content<Plotline.PLabelInternal>",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "PLabel",
-                    "printedName": "Plotline.PLabel",
-                    "usr": "s:8Plotline6PLabelV"
+                    "name": "PLabelInternal",
+                    "printedName": "Plotline.PLabelInternal",
+                    "usr": "s:8Plotline14PLabelInternalV"
                   }
                 ],
                 "usr": "s:7SwiftUI21_ViewModifier_ContentV"
               }
             ],
             "declKind": "Func",
-            "usr": "s:8Plotline6PLabelV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF",
-            "mangledName": "$s8Plotline6PLabelV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF",
+            "usr": "s:8Plotline14PLabelInternalV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF",
+            "mangledName": "$s8Plotline14PLabelInternalV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF",
             "moduleName": "Plotline",
             "declAttributes": [
               "Custom",
@@ -9937,8 +9937,8 @@
           }
         ],
         "declKind": "Struct",
-        "usr": "s:8Plotline6PLabelV",
-        "mangledName": "$s8Plotline6PLabelV",
+        "usr": "s:8Plotline14PLabelInternalV",
+        "mangledName": "$s8Plotline14PLabelInternalV",
         "moduleName": "Plotline",
         "intro_iOS": "13.0",
         "declAttributes": [
@@ -9959,18 +9959,18 @@
                   {
                     "kind": "TypeNominal",
                     "name": "ModifiedContent",
-                    "printedName": "SwiftUI.ModifiedContent<SwiftUI._ViewModifier_Content<Plotline.PLabel>, SwiftUI._OverlayModifier<SwiftUI.ModifiedContent<SwiftUI.GeometryReader<SwiftUI.Color>, SwiftUI._AppearanceActionModifier>>>",
+                    "printedName": "SwiftUI.ModifiedContent<SwiftUI._ViewModifier_Content<Plotline.PLabelInternal>, SwiftUI._OverlayModifier<SwiftUI.ModifiedContent<SwiftUI.GeometryReader<SwiftUI.Color>, SwiftUI._AppearanceActionModifier>>>",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "_ViewModifier_Content",
-                        "printedName": "SwiftUI._ViewModifier_Content<Plotline.PLabel>",
+                        "printedName": "SwiftUI._ViewModifier_Content<Plotline.PLabelInternal>",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "PLabel",
-                            "printedName": "Plotline.PLabel",
-                            "usr": "s:8Plotline6PLabelV"
+                            "name": "PLabelInternal",
+                            "printedName": "Plotline.PLabelInternal",
+                            "usr": "s:8Plotline14PLabelInternalV"
                           }
                         ],
                         "usr": "s:7SwiftUI21_ViewModifier_ContentV"
@@ -29990,6 +29990,74 @@
         "printedName": "CoreData",
         "declKind": "Import",
         "moduleName": "Plotline"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "View",
+        "printedName": "View",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "PLabel",
+            "printedName": "PLabel(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ModifiedContent",
+                "printedName": "SwiftUI.ModifiedContent<τ_0_0, Plotline.PLabelInternal>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PLabelInternal",
+                    "printedName": "Plotline.PLabelInternal",
+                    "usr": "s:8Plotline14PLabelInternalV"
+                  }
+                ],
+                "usr": "s:7SwiftUI15ModifiedContentV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftUI4ViewP8PlotlineE6PLabelyQrSSF",
+            "mangledName": "$s7SwiftUI4ViewP8PlotlineE6PLabelyQrSSF",
+            "moduleName": "Plotline",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftUI.View>",
+            "sugared_genericSig": "<Self where Self : SwiftUI.View>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:7SwiftUI4ViewP",
+        "mangledName": "$s7SwiftUI4ViewP",
+        "moduleName": "SwiftUI",
+        "genericSig": "<τ_0_0.Body : SwiftUI.View>",
+        "sugared_genericSig": "<Self.Body : SwiftUI.View>",
+        "intro_Macosx": "10.15",
+        "intro_iOS": "13.0",
+        "intro_tvOS": "13.0",
+        "intro_watchOS": "6.0",
+        "declAttributes": [
+          "TypeEraser",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true
       }
     ],
     "json_format_version": 8
@@ -35682,42 +35750,42 @@
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 539,
+      "offset": 547,
       "length": 32,
       "value": "\"Position for \""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 561,
+      "offset": 569,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 570,
+      "offset": 578,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 811,
+      "offset": 819,
       "length": 45,
       "value": "\"Disposed \""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 829,
+      "offset": 837,
       "length": 1,
       "value": "\", Remaining \""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 855,
+      "offset": 863,
       "length": 2,
       "value": "\"\""
     },
