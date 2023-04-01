@@ -124,6 +124,7 @@ public protocol PageListener {
   public var activeStepId: Swift.String
   public var xPos: Swift.Double
   public var yPos: Swift.Double
+  public var button: PlotlineFloatingButton?
   public func setPosition(newX: Swift.Double, newY: Swift.Double)
   public static func getInstance() -> Flows
   public static func showFloatingButton(view: UIKit.UIView)
