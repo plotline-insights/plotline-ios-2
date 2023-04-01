@@ -268,9 +268,10 @@ public protocol InitCallback {
   @objc public func registerInitCallback(callback: @escaping () -> ())
   public func getInitCallbacks() -> [() -> ()]
   public func clearCallBacks()
-  public func getSwiftUICoordinates() -> [Swift.String : (CoreFoundation.CGRect, Swift.Int64)]
+  public func getSwiftUICoordinates() -> [Swift.String : (CoreFoundation.CGRect, Swift.Int64, Swift.Bool)]
   public func addSwiftUICoordinates(label: Swift.String, rect: CoreFoundation.CGRect)
-  public func removeSwiftUICoordinates(label: Swift.String)
+  public func onSwiftUIViewDisappear(label: Swift.String)
+  public func onSwiftUIViewAppear(label: Swift.String)
   public static func getInstance() -> Plotline
   public func initKeys(apiKey: Swift.String, userId: Swift.String)
   public func setDefaultAttributes(appVersion: Swift.String, iosVersion: Swift.String, deviceId: Swift.String)
