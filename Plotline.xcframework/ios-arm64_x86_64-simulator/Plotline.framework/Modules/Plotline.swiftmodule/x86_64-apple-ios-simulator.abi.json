@@ -9258,6 +9258,64 @@
           },
           {
             "kind": "Function",
+            "name": "addSwiftUICoordinates",
+            "printedName": "addSwiftUICoordinates(label:rect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8PlotlineAAC21addSwiftUICoordinates5label4rectySS_So6CGRectVtF",
+            "mangledName": "$s8PlotlineAAC21addSwiftUICoordinates5label4rectySS_So6CGRectVtF",
+            "moduleName": "Plotline",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeSwiftUICoordinates",
+            "printedName": "removeSwiftUICoordinates(label:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8PlotlineAAC24removeSwiftUICoordinates5labelySS_tF",
+            "mangledName": "$s8PlotlineAAC24removeSwiftUICoordinates5labelySS_tF",
+            "moduleName": "Plotline",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getInstance",
             "printedName": "getInstance()",
             "children": [
@@ -35659,133 +35717,112 @@
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "BooleanLiteral",
-      "offset": 9370,
+      "offset": 9661,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 9701,
+      "offset": 9992,
       "length": 11,
       "value": "\"mockStudy\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "BooleanLiteral",
-      "offset": 9759,
+      "offset": 10050,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 9785,
+      "offset": 10076,
       "length": 23,
       "value": "\"Thanks for your input\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "BooleanLiteral",
-      "offset": 9824,
+      "offset": 10115,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10521,
+      "offset": 10812,
       "length": 4,
       "value": "\"a:\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10540,
+      "offset": 10831,
       "length": 4,
       "value": "\"a:\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "BooleanLiteral",
-      "offset": 10785,
+      "offset": 11076,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10815,
+      "offset": 11106,
       "length": 13,
       "value": "\"URL: \""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10827,
+      "offset": 11118,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10898,
+      "offset": 11189,
       "length": 7,
       "value": "\"token\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10937,
+      "offset": 11228,
       "length": 17,
       "value": "\"Token: \""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Plotline.swift",
       "kind": "StringLiteral",
-      "offset": 10953,
+      "offset": 11244,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 547,
+      "offset": 474,
       "length": 32,
       "value": "\"Position for \""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 569,
+      "offset": 496,
       "length": 1,
       "value": "\":\""
     },
     {
       "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
       "kind": "StringLiteral",
-      "offset": 578,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
-      "kind": "StringLiteral",
-      "offset": 819,
-      "length": 45,
-      "value": "\"Disposed \""
-    },
-    {
-      "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
-      "kind": "StringLiteral",
-      "offset": 837,
-      "length": 1,
-      "value": "\", Remaining \""
-    },
-    {
-      "filePath": "\/Users\/adarsh\/Documents\/Projects\/plotline-ios-sdk\/Plotline\/builds\/tzMUB_CW\/0\/plotline\/plotline-ios-sdk\/Plotline\/Plotline\/Helpers\/PlotlineSwiftUI.swift",
-      "kind": "StringLiteral",
-      "offset": 863,
+      "offset": 505,
       "length": 2,
       "value": "\"\""
     },
