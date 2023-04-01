@@ -7,6 +7,7 @@ import CoreData
 import Foundation
 @_exported import Plotline
 import Swift
+import SwiftUI
 import UIKit
 import _Concurrency
 import _StringProcessing
@@ -266,6 +267,7 @@ public protocol InitCallback {
   @objc public func registerInitCallback(callback: @escaping () -> ())
   public func getInitCallbacks() -> [() -> ()]
   public func clearCallBacks()
+  public func getSwiftUICoordinates() -> [Swift.String : (CoreFoundation.CGRect, Swift.Int64)]
   public static func getInstance() -> Plotline
   public func initKeys(apiKey: Swift.String, userId: Swift.String)
   public func setDefaultAttributes(appVersion: Swift.String, iosVersion: Swift.String, deviceId: Swift.String)
@@ -282,6 +284,12 @@ public protocol InitCallback {
   @objc public static func initAlong(_ url: Foundation.URL)
   @objc public static func debug(shouldDebug: Swift.Bool)
   @objc deinit
+}
+@available(iOS 13.0, *)
+public struct PLabel : SwiftUI.ViewModifier {
+  @_Concurrency.MainActor(unsafe) public func body(content: PLabel.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s8Plotline6PLabelV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
 }
 public class EligibilityTask {
   public init(campaigns: [Campaign], eligibilityCallback: @escaping ([Campaign]) -> ())
